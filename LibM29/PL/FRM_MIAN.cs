@@ -119,5 +119,26 @@ namespace LibM29.PL
                 
             }
         }
+
+        private void FRM_MIAN_Activated(object sender, EventArgs e)
+        {
+            if (State=="CAT")
+            {
+                // load data cat
+                try
+                {
+                    DataTable dt = new DataTable();
+                    dt = BLCAT.Load();
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[0].HeaderText = "sıralama";
+                    dataGridView1.Columns[1].HeaderText = "ürün adı";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

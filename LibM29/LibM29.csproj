@@ -74,6 +74,24 @@
     <Compile Include="PL\FRM_ADDCAT.Designer.cs">
       <DependentUpon>FRM_ADDCAT.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_DADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DADD.Designer.cs">
+      <DependentUpon>FRM_DADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_DEDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DEDT.Designer.cs">
+      <DependentUpon>FRM_DEDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_ERROR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ERROR.Designer.cs">
+      <DependentUpon>FRM_ERROR.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_MIAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +102,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\FRM_ADDCAT.resx">
       <DependentUpon>FRM_ADDCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DADD.resx">
+      <DependentUpon>FRM_DADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DEDT.resx">
+      <DependentUpon>FRM_DEDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ERROR.resx">
+      <DependentUpon>FRM_ERROR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MIAN.resx">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>

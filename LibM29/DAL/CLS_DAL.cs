@@ -26,11 +26,15 @@ using System.Data.SqlClient;
     //method to close sqlcon
     public void close()
     {
+        
         if (con.State == ConnectionState.Open)
         {
-            con.Open();
+            
+            con.Close();
+            
 
         }
+        
 
     }
     //fun to read data
