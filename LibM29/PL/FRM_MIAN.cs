@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibM29.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace LibM29.PL
     {
         string State;
         int ID;
+        //var for CAT
+        BL.CLS_CAT BLCAT = new CLS_CAT();
         public FRM_MIAN()
         {
             InitializeComponent();
@@ -78,6 +81,24 @@ namespace LibM29.PL
             P_MINE.Visible = true;
             State = "CAT";
             Lb_Ttle.Text = "    TÜRLER  ";
+
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLCAT.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "ürün adı";
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
         }
 
         private void FRM_MIAN_Load(object sender, EventArgs e)
@@ -85,6 +106,18 @@ namespace LibM29.PL
             P_HOME.Visible = true;
             P_MINE.Visible = false;
             Lb_Ttle.Text = "  ANA SAYFA";
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            //ADD CATEGORE
+            if (State == "CAT")
+            {
+                PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
+                FCAT.btnadd.ButtonText = "eklemek";
+                bunifuTransition1.ShowSync(FCAT);
+                
+            }
         }
     }
 }

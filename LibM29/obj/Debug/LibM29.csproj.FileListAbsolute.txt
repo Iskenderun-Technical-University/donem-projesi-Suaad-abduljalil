@@ -26,3 +26,4 @@ C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\Li
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.pdb
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\bin\Debug\DBLIBM.mdf
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\bin\Debug\DBLIBM_log.ldf
+C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.PL.FRM_ADDCAT.resources

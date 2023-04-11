@@ -66,7 +66,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CLS_CAT.cs" />
     <Compile Include="DAL\CLS_DAL.cs" />
+    <Compile Include="PL\FRM_ADDCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADDCAT.Designer.cs">
+      <DependentUpon>FRM_ADDCAT.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_MIAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\FRM_ADDCAT.resx">
+      <DependentUpon>FRM_ADDCAT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MIAN.resx">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,9 +111,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\236831.png" />
   </ItemGroup>
