@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace LibM29.BL
 {
@@ -23,6 +24,7 @@ namespace LibM29.BL
 
 
         }
+        //INSERT DATA
         public void insert  (string CAT_NAME)
             {
             SqlParameter[] pr = new SqlParameter[1];
@@ -31,5 +33,19 @@ namespace LibM29.BL
             DAL.Excute("P_ADDCAT", pr);
             DAL.close();
         }
+    
+
+//UPDATE DATA
+public void update(string CAT_NAME , int ID)
+{
+    SqlParameter[] pr = new SqlParameter[2];
+    pr[0] = new SqlParameter("CAT_NAME", CAT_NAME);
+    pr[1] = new SqlParameter("ID", ID);
+
+            DAL.open();
+    DAL.Excute("P_EDITCAT", pr);
+    DAL.close();
+}
     }
 }
+

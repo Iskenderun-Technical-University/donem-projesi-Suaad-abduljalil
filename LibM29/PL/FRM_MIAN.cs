@@ -115,6 +115,7 @@ namespace LibM29.PL
             {
                 PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
                 FCAT.btnadd.ButtonText = "eklemek";
+                FCAT.ID = 0;
                 bunifuTransition1.ShowSync(FCAT);
                 
             }
@@ -140,5 +141,21 @@ namespace LibM29.PL
                 }
             }
         }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            //EDIT CATEGORE
+            if (State == "CAT")
+            {
+                PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
+                FCAT.btnadd.ButtonText = "değişiklik";
+                FCAT.txt_catname.Text= Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+                FCAT.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+
+                bunifuTransition1.ShowSync(FCAT);
+
+            }
+        }
     }
-}
+    }
+

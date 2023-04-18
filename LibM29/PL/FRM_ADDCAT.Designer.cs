@@ -133,6 +133,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_ADDCAT";
+            this.Load += new System.EventHandler(this.FRM_ADDCAT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,8 +144,8 @@
 
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label Lb_Ttle;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_catname;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnadd;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txt_catname;
     }
 }

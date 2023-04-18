@@ -41,9 +41,9 @@
             this.Lb_Ttle.ForeColor = System.Drawing.Color.White;
             this.Lb_Ttle.Location = new System.Drawing.Point(223, 200);
             this.Lb_Ttle.Name = "Lb_Ttle";
-            this.Lb_Ttle.Size = new System.Drawing.Size(194, 25);
+            this.Lb_Ttle.Size = new System.Drawing.Size(198, 25);
             this.Lb_Ttle.TabIndex = 4;
-            this.Lb_Ttle.Text = "Başarıyla eklendiniz";
+            this.Lb_Ttle.Text = "Başarıyla değiştirildi";
             // 
             // timer1
             // 
