@@ -134,6 +134,7 @@
             this.P_MB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.P_MB.Size = new System.Drawing.Size(175, 512);
             this.P_MB.TabIndex = 0;
+            this.P_MB.Paint += new System.Windows.Forms.PaintEventHandler(this.P_MB_Paint);
             // 
             // button7
             // 
@@ -955,6 +956,7 @@
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(309, 36);
             this.bunifuMaterialTextbox1.TabIndex = 2;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
             // 
             // bunifuElipse1
             // 

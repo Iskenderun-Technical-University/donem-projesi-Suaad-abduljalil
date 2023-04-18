@@ -24,6 +24,17 @@ namespace LibM29.BL
 
 
         }
+        // SEARCH
+        public DataTable serach(string search)
+        {
+            SqlParameter[]pr =new SqlParameter[1];
+            pr[0] = new SqlParameter("SEARCH",search);
+            DataTable dt = new DataTable();
+            dt = DAL.read("P_CATSEARCH", pr);
+            return dt;
+
+
+        }
         //INSERT DATA
         public void insert  (string CAT_NAME)
             {

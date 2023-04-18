@@ -168,6 +168,24 @@ namespace LibM29.PL
 
             }
         }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+            //SEARCH CATEGORE
+            if (State == "CAT")
+            {
+                DataTable dt = new DataTable();
+                dt = BLCAT.serach(bunifuMaterialTextbox1.Text);
+                dataGridView1.DataSource = dt;
+                
+
+            }
+        }
+
+        private void P_MB_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 
