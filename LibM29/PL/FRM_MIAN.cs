@@ -156,6 +156,18 @@ namespace LibM29.PL
 
             }
         }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            //delete CATEGORE
+            if (State == "CAT")
+            {
+                BLCAT.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+                fdelete.Show();
+
+            }
+        }
     }
     }
 

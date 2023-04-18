@@ -46,6 +46,21 @@ public void update(string CAT_NAME , int ID)
     DAL.Excute("P_EDITCAT", pr);
     DAL.close();
 }
+    
+
+
+    //Delete DATA
+    public void Delete (int ID)
+    {
+        SqlParameter[] pr = new SqlParameter[1];
+       
+        pr[0] = new SqlParameter("ID", ID);
+
+        DAL.open();
+        DAL.Excute("P_DELLETECAT", pr);
+        DAL.close();
     }
 }
+}
+
 

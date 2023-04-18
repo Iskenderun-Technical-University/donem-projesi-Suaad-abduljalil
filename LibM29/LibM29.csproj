@@ -80,6 +80,12 @@
     <Compile Include="PL\FRM_DADD.Designer.cs">
       <DependentUpon>FRM_DADD.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_DDELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DDELETE.Designer.cs">
+      <DependentUpon>FRM_DDELETE.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_DEDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_DADD.resx">
       <DependentUpon>FRM_DADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DDELETE.resx">
+      <DependentUpon>FRM_DDELETE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_DEDT.resx">
       <DependentUpon>FRM_DEDT.cs</DependentUpon>
