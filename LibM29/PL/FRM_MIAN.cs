@@ -17,6 +17,8 @@ namespace LibM29.PL
         int ID;
         //var for CAT
         BL.CLS_CAT BLCAT = new CLS_CAT();
+        //INSTANCE OF BOOKS
+        BL.CLS_BOOKS BLBOOKS = new BL.CLS_BOOKS();
         public FRM_MIAN()
         {
             InitializeComponent();
@@ -72,7 +74,31 @@ namespace LibM29.PL
 
         private void button2_Click(object sender, EventArgs e)
         {
+            P_HOME.Visible = false;
+            P_MINE.Visible = true;
+            bunifuThinButton24.Visible = true;
+            State = "BOOKS";
+            Lb_Ttle.Text = "    KİTABLAR ";
 
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLBOOKS.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "kitab adı";
+                dataGridView1.Columns[2].HeaderText = "yazar adı";
+                dataGridView1.Columns[3].HeaderText = "kategori";
+                dataGridView1.Columns[4].HeaderText = "fiyat";
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -133,6 +159,34 @@ namespace LibM29.PL
                     dataGridView1.DataSource = dt;
                     dataGridView1.Columns[0].HeaderText = "sıralama";
                     dataGridView1.Columns[1].HeaderText = "ürün adı";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }else if (State == "BOOKS")
+            {
+                P_HOME.Visible = false;
+                P_MINE.Visible = true;
+                bunifuThinButton24.Visible = true;
+                State = "BOOKS";
+                Lb_Ttle.Text = "    KİTABLAR ";
+
+
+                // load data
+                try
+                {
+                    DataTable dt = new DataTable();
+                    dt = BLBOOKS.Load();
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[0].HeaderText = "sıralama";
+                    dataGridView1.Columns[1].HeaderText = "kitab adı";
+                    dataGridView1.Columns[2].HeaderText = "yazar adı";
+                    dataGridView1.Columns[3].HeaderText = "kategori";
+                    dataGridView1.Columns[4].HeaderText = "fiyat";
+
 
                 }
                 catch (Exception ex)

@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CLS_BOOKS.cs" />
     <Compile Include="BL\CLS_CAT.cs" />
     <Compile Include="DAL\CLS_DAL.cs" />
     <Compile Include="PL\FRM_ADDCAT.cs">
