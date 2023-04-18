@@ -145,6 +145,15 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FCAT);
                 
             }
+            //ADD books
+            if (State == "BOOKS")
+            {
+                PL.FRM_ADDBOKKS FBOOKS = new FRM_ADDBOKKS();
+                FBOOKS.btnadd.ButtonText = "eklemek";
+                FBOOKS.ID = 0;
+                bunifuTransition1.ShowSync(FBOOKS);
+
+            }
         }
 
         private void FRM_MIAN_Activated(object sender, EventArgs e)
