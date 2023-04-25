@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace LibM29.PL
 {
@@ -212,12 +214,51 @@ namespace LibM29.PL
             {
                 PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
                 FCAT.btnadd.ButtonText = "değişiklik";
-                FCAT.txt_catname.Text= Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+                FCAT.txt_catname.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
                 FCAT.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
 
                 bunifuTransition1.ShowSync(FCAT);
 
             }
+            else if (State == "BOOKS")
+            {
+                try
+                {
+                    PL.FRM_ADDBOKKS FBOOKS = new FRM_ADDBOKKS();
+                    FBOOKS.btnadd.ButtonText = "değişiklik";
+                    FBOOKS.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+                    DataTable dt = new DataTable();
+                    dt = BLBOOKS.LOADEDIT(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                    object obj1 = dt.Rows[0]["TITLE"];
+                    object obj2 = dt.Rows[0]["AUTHER"];
+                    object obj3 = dt.Rows[0]["CAT"];
+                    object obj4 = dt.Rows[0]["PRICE"];
+                    object obj5 = dt.Rows[0]["BDATE"];
+                    object obj6 = dt.Rows[0]["RATE"];
+                    object obj7 = dt.Rows[0]["COVER"];
+                    FBOOKS.txt_title.Text = obj1.ToString();
+                    FBOOKS.txt_auther.Text = obj2.ToString();
+                    FBOOKS.comboBox1.Text = obj3.ToString();
+                    FBOOKS.txt_price.Text = obj4.ToString();
+                    FBOOKS.txt_date.Value = (DateTime)obj5;
+                    FBOOKS.txt_rate.Value = (int)obj6;
+                    //load ımage
+                    byte[] ob = (byte[])obj7;
+                    MemoryStream ma = new MemoryStream(ob);
+                    FBOOKS.cover.Image = Image.FromStream(ma);
+
+                    bunifuTransition1.ShowSync(FBOOKS);
+
+
+                }
+                catch
+                {
+
+                }
+               
+
+            }
+        
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
@@ -226,6 +267,13 @@ namespace LibM29.PL
             if (State == "CAT")
             {
                 BLCAT.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+                fdelete.Show();
+
+                //delete books
+            } else if (State == "BOOKS")
+            {
+                BLBOOKS.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
                 PL.FRM_DDELETE fdelete = new FRM_DDELETE();
                 fdelete.Show();
 

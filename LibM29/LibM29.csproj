@@ -99,6 +99,12 @@
     <Compile Include="PL\FRM_DEDT.Designer.cs">
       <DependentUpon>FRM_DEDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_DETBOOKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DETBOOKS.Designer.cs">
+      <DependentUpon>FRM_DETBOOKS.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_ERROR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_DEDT.resx">
       <DependentUpon>FRM_DEDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DETBOOKS.resx">
+      <DependentUpon>FRM_DETBOOKS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_ERROR.resx">
       <DependentUpon>FRM_ERROR.cs</DependentUpon>

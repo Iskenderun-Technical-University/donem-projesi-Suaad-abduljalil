@@ -100,9 +100,13 @@ namespace LibM29.PL
                 }
                 else
                 {
+
+                    MemoryStream ma = new MemoryStream();
+                    cover.Image.Save(ma, System.Drawing.Imaging.ImageFormat.Jpeg);
                     //edit
-                    BL.CLS_CAT BLCAT = new BL.CLS_CAT();
-                    BLCAT.update(txt_title.Text, ID);
+                    BL.CLS_BOOKS BLCAT = new BL.CLS_BOOKS();
+
+                    BLCAT.update(txt_title.Text, txt_auther.Text, comboBox1.Text, txt_price.Text, txt_date.Value.ToString(), txt_rate.Value, ma,ID);
                     PL.FRM_DEDT fEdIT = new FRM_DEDT();
                     fEdIT.Show();
                     this.Close();

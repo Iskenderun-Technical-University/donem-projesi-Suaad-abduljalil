@@ -45,12 +45,12 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cover = new System.Windows.Forms.PictureBox();
             this.txt_rate = new Bunifu.Framework.UI.BunifuRating();
+            this.txt_date = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txt_date = new Bunifu.Framework.UI.BunifuDatepicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cover)).BeginInit();
@@ -180,7 +180,7 @@
             this.txt_auther.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_auther.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txt_auther.LineThickness = 4;
-            this.txt_auther.Location = new System.Drawing.Point(0, 144);
+            this.txt_auther.Location = new System.Drawing.Point(6, 155);
             this.txt_auther.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_auther.Name = "txt_auther";
             this.txt_auther.Size = new System.Drawing.Size(293, 37);
@@ -282,6 +282,21 @@
             this.txt_rate.TabIndex = 15;
             this.txt_rate.Value = 0;
             // 
+            // txt_date
+            // 
+            this.txt_date.BackColor = System.Drawing.Color.SeaGreen;
+            this.txt_date.BorderRadius = 0;
+            this.txt_date.ForeColor = System.Drawing.Color.White;
+            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txt_date.FormatCustom = null;
+            this.txt_date.Location = new System.Drawing.Point(15, 98);
+            this.txt_date.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(454, 54);
+            this.txt_date.TabIndex = 14;
+            this.txt_date.Value = new System.DateTime(2023, 4, 18, 23, 39, 52, 4);
+            this.txt_date.onValueChanged += new System.EventHandler(this.txt_date_onValueChanged);
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -338,21 +353,6 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // txt_date
-            // 
-            this.txt_date.BackColor = System.Drawing.Color.SeaGreen;
-            this.txt_date.BorderRadius = 0;
-            this.txt_date.ForeColor = System.Drawing.Color.White;
-            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txt_date.FormatCustom = null;
-            this.txt_date.Location = new System.Drawing.Point(15, 98);
-            this.txt_date.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(454, 54);
-            this.txt_date.TabIndex = 14;
-            this.txt_date.Value = new System.DateTime(2023, 4, 18, 23, 39, 52, 4);
-            this.txt_date.onValueChanged += new System.EventHandler(this.txt_date_onValueChanged);
-            // 
             // FRM_ADDBOKKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -386,7 +386,6 @@
         public Bunifu.Framework.UI.BunifuThinButton2 btnadd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Lb_Ttle;
-        private System.Windows.Forms.ComboBox comboBox1;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txt_price;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -395,14 +394,15 @@
         public Bunifu.Framework.UI.BunifuMaterialTextbox txt_title;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox cover;
-        private Bunifu.Framework.UI.BunifuRating txt_rate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private Bunifu.Framework.UI.BunifuDatepicker txt_date;
+        public System.Windows.Forms.PictureBox cover;
+        public Bunifu.Framework.UI.BunifuRating txt_rate;
+        public Bunifu.Framework.UI.BunifuDatepicker txt_date;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }
