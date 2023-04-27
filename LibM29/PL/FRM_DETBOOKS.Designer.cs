@@ -36,15 +36,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_price = new System.Windows.Forms.Label();
+            this.txt_cat = new System.Windows.Forms.Label();
+            this.txt_auther = new System.Windows.Forms.Label();
+            this.txt_title = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Lb_Ttle = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txt_price = new System.Windows.Forms.Label();
-            this.txt_cat = new System.Windows.Forms.Label();
-            this.txt_auther = new System.Windows.Forms.Label();
-            this.txt_title = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cover)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -143,6 +143,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txt_price);
             this.groupBox1.Controls.Add(this.txt_cat);
             this.groupBox1.Controls.Add(this.txt_auther);
@@ -159,6 +160,54 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TEMEL BİLGİLER";
+            // 
+            // txt_price
+            // 
+            this.txt_price.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_price.AutoSize = true;
+            this.txt_price.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_price.ForeColor = System.Drawing.Color.White;
+            this.txt_price.Location = new System.Drawing.Point(225, 294);
+            this.txt_price.Name = "txt_price";
+            this.txt_price.Size = new System.Drawing.Size(0, 19);
+            this.txt_price.TabIndex = 17;
+            this.txt_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_cat
+            // 
+            this.txt_cat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_cat.AutoSize = true;
+            this.txt_cat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cat.ForeColor = System.Drawing.Color.White;
+            this.txt_cat.Location = new System.Drawing.Point(204, 198);
+            this.txt_cat.Name = "txt_cat";
+            this.txt_cat.Size = new System.Drawing.Size(0, 19);
+            this.txt_cat.TabIndex = 16;
+            this.txt_cat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_auther
+            // 
+            this.txt_auther.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_auther.AutoSize = true;
+            this.txt_auther.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_auther.ForeColor = System.Drawing.Color.White;
+            this.txt_auther.Location = new System.Drawing.Point(234, 115);
+            this.txt_auther.Name = "txt_auther";
+            this.txt_auther.Size = new System.Drawing.Size(0, 19);
+            this.txt_auther.TabIndex = 15;
+            this.txt_auther.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_title
+            // 
+            this.txt_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_title.AutoSize = true;
+            this.txt_title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_title.ForeColor = System.Drawing.Color.White;
+            this.txt_title.Location = new System.Drawing.Point(237, 42);
+            this.txt_title.Name = "txt_title";
+            this.txt_title.Size = new System.Drawing.Size(0, 19);
+            this.txt_title.TabIndex = 14;
+            this.txt_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -223,54 +272,6 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // txt_price
-            // 
-            this.txt_price.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_price.AutoSize = true;
-            this.txt_price.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_price.ForeColor = System.Drawing.Color.White;
-            this.txt_price.Location = new System.Drawing.Point(225, 294);
-            this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(0, 19);
-            this.txt_price.TabIndex = 17;
-            this.txt_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_cat
-            // 
-            this.txt_cat.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_cat.AutoSize = true;
-            this.txt_cat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cat.ForeColor = System.Drawing.Color.White;
-            this.txt_cat.Location = new System.Drawing.Point(204, 198);
-            this.txt_cat.Name = "txt_cat";
-            this.txt_cat.Size = new System.Drawing.Size(0, 19);
-            this.txt_cat.TabIndex = 16;
-            this.txt_cat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_auther
-            // 
-            this.txt_auther.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_auther.AutoSize = true;
-            this.txt_auther.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_auther.ForeColor = System.Drawing.Color.White;
-            this.txt_auther.Location = new System.Drawing.Point(234, 115);
-            this.txt_auther.Name = "txt_auther";
-            this.txt_auther.Size = new System.Drawing.Size(0, 19);
-            this.txt_auther.TabIndex = 15;
-            this.txt_auther.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_title
-            // 
-            this.txt_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_title.AutoSize = true;
-            this.txt_title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_title.ForeColor = System.Drawing.Color.White;
-            this.txt_title.Location = new System.Drawing.Point(237, 42);
-            this.txt_title.Name = "txt_title";
-            this.txt_title.Size = new System.Drawing.Size(0, 19);
-            this.txt_title.TabIndex = 14;
-            this.txt_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FRM_DETBOOKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,10 +310,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lb_Ttle;
-        private System.Windows.Forms.Label txt_price;
-        private System.Windows.Forms.Label txt_cat;
-        private System.Windows.Forms.Label txt_auther;
-        private System.Windows.Forms.Label txt_title;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        public System.Windows.Forms.Label txt_price;
+        public System.Windows.Forms.Label txt_cat;
+        public System.Windows.Forms.Label txt_auther;
+        public System.Windows.Forms.Label txt_title;
     }
 }

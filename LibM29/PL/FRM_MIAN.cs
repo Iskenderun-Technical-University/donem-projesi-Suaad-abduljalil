@@ -38,8 +38,8 @@ namespace LibM29.PL
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            if(WindowState == FormWindowState.Normal)
-              {
+            if (WindowState == FormWindowState.Normal)
+            {
                 this.WindowState = FormWindowState.Maximized;
 
             }
@@ -51,21 +51,21 @@ namespace LibM29.PL
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-            if (P_MB.Size.Width==175)
+            if (P_MB.Size.Width == 175)
             {
                 P_MB.Width = 50;
                 button1.RightToLeft = RightToLeft.Yes;
                 button2.RightToLeft = RightToLeft.Yes;
                 button3.RightToLeft = RightToLeft.Yes;
                 button4.RightToLeft = RightToLeft.Yes;
-               
+
             }
             else
             {
                 P_MB.Width = 175;
-                
-               
-               
+
+
+
             }
         }
 
@@ -94,7 +94,7 @@ namespace LibM29.PL
                 dataGridView1.Columns[2].HeaderText = "yazar adı";
                 dataGridView1.Columns[3].HeaderText = "kategori";
                 dataGridView1.Columns[4].HeaderText = "fiyat";
-                
+
 
             }
             catch (Exception ex)
@@ -121,11 +121,11 @@ namespace LibM29.PL
                 dataGridView1.Columns[1].HeaderText = "ürün adı";
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
 
         }
 
@@ -145,7 +145,7 @@ namespace LibM29.PL
                 FCAT.btnadd.ButtonText = "eklemek";
                 FCAT.ID = 0;
                 bunifuTransition1.ShowSync(FCAT);
-                
+
             }
             //ADD books
             if (State == "BOOKS")
@@ -160,7 +160,7 @@ namespace LibM29.PL
 
         private void FRM_MIAN_Activated(object sender, EventArgs e)
         {
-            if (State=="CAT")
+            if (State == "CAT")
             {
                 // load data cat
                 try
@@ -176,8 +176,9 @@ namespace LibM29.PL
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
-            }else if (State == "BOOKS")
+
+            }
+            else if (State == "BOOKS")
             {
                 P_HOME.Visible = false;
                 P_MINE.Visible = true;
@@ -255,10 +256,10 @@ namespace LibM29.PL
                 {
 
                 }
-               
+
 
             }
-        
+
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
@@ -271,7 +272,8 @@ namespace LibM29.PL
                 fdelete.Show();
 
                 //delete books
-            } else if (State == "BOOKS")
+            }
+            else if (State == "BOOKS")
             {
                 BLBOOKS.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
                 PL.FRM_DDELETE fdelete = new FRM_DDELETE();
@@ -288,7 +290,7 @@ namespace LibM29.PL
                 DataTable dt = new DataTable();
                 dt = BLCAT.serach(bunifuMaterialTextbox1.Text);
                 dataGridView1.DataSource = dt;
-                
+
 
             }
         }
@@ -297,6 +299,46 @@ namespace LibM29.PL
         {
 
         }
+
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        {
+            //det books
+            if (State == "BOOKS")
+            {
+                try
+                {
+
+                    DataTable dt = new DataTable();
+                    dt = BLBOOKS.LOADEDIT(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                    object obj1 = dt.Rows[0]["TITLE"];
+                    object obj2 = dt.Rows[0]["AUTHER"];
+                    object obj3 = dt.Rows[0]["CAT"];
+                    object obj4 = dt.Rows[0]["PRICE"];
+                    object obj5 = dt.Rows[0]["BDATE"];
+                    object obj6 = dt.Rows[0]["RATE"];
+                    object obj7 = dt.Rows[0]["COVER"];
+                    PL.FRM_DETBOOKS DETBOOKS = new FRM_DETBOOKS();
+                    DETBOOKS.txt_title.Text = obj1.ToString();
+                    DETBOOKS.txt_auther.Text = obj2.ToString();
+                    DETBOOKS.txt_cat.Text = obj3.ToString();
+                    DETBOOKS.txt_price.Text = obj4.ToString();
+                    DETBOOKS.txt_date.Value = (DateTime)obj5;
+                    DETBOOKS.txt_rate.Value = (int)obj6;
+                    //load ımage
+                    byte[] ob = (byte[])obj7;
+                    MemoryStream ma = new MemoryStream(ob);
+                    DETBOOKS.cover.Image = Image.FromStream(ma);
+
+                    bunifuTransition1.ShowSync(DETBOOKS);
+
+
+                }
+                catch
+                {
+                }
+            }
+        }
     }
-    }
+}
+    
 
