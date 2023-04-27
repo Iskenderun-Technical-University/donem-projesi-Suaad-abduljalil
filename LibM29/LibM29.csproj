@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="BL\CLS_BOOKS.cs" />
     <Compile Include="BL\CLS_CAT.cs" />
+    <Compile Include="BL\CLS_ST.cs" />
     <Compile Include="DAL\CLS_DAL.cs" />
     <Compile Include="PL\FRM_ADDBOKKS.cs">
       <SubType>Form</SubType>

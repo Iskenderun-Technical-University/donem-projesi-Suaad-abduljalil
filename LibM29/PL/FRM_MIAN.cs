@@ -21,6 +21,9 @@ namespace LibM29.PL
         BL.CLS_CAT BLCAT = new CLS_CAT();
         //INSTANCE OF BOOKS
         BL.CLS_BOOKS BLBOOKS = new BL.CLS_BOOKS();
+
+        //INSTANCE OF STUDENT
+        BL.CLS_ST BLST = new BL.CLS_ST();
         public FRM_MIAN()
         {
             InitializeComponent();
@@ -206,6 +209,34 @@ namespace LibM29.PL
                     MessageBox.Show(ex.Message);
                 }
             }
+            else if (State =="ST")
+            {
+                P_HOME.Visible = false;
+                P_MINE.Visible = true;
+                bunifuThinButton24.Visible = true;
+                State = "ST";
+                Lb_Ttle.Text = "   ÖĞRENCİLER ";
+
+
+                // load data
+                try
+                {
+                    DataTable dt = new DataTable();
+                    dt = BLST.Load();
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[0].HeaderText = "sıralama";
+                    dataGridView1.Columns[1].HeaderText = "Öğrenci adı";
+                    dataGridView1.Columns[2].HeaderText = "yaşamak";
+                    dataGridView1.Columns[3].HeaderText = "telefon numarası";
+                    dataGridView1.Columns[4].HeaderText = "e-posta";
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -288,6 +319,15 @@ namespace LibM29.PL
             if (State == "CAT")
             {
                 DataTable dt = new DataTable();
+                dt = BLBOOKS.serach(bunifuMaterialTextbox1.Text);
+                dataGridView1.DataSource = dt;
+
+
+            }
+            //SEARCH CATEGORE
+            if (State == "BOOKS")
+            {
+                DataTable dt = new DataTable();
                 dt = BLCAT.serach(bunifuMaterialTextbox1.Text);
                 dataGridView1.DataSource = dt;
 
@@ -336,6 +376,35 @@ namespace LibM29.PL
                 catch
                 {
                 }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            P_HOME.Visible = false;
+            P_MINE.Visible = true;
+            bunifuThinButton24.Visible = true;
+            State = "ST";
+            Lb_Ttle.Text = "   ÖĞRENCİLER ";
+
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLST.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "Öğrenci adı";
+                dataGridView1.Columns[2].HeaderText = "yaşamak";
+                dataGridView1.Columns[3].HeaderText = "telefon numarası";
+                dataGridView1.Columns[4].HeaderText = "e-posta";
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
