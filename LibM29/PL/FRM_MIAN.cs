@@ -159,6 +159,15 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FBOOKS);
 
             }
+            //ADD STUDENT
+            if (State == "ST")
+            {
+                PL.FRM_ADDSTUDNET FBOOKS = new FRM_ADDSTUDNET();
+                FBOOKS.btnadd.ButtonText = "eklemek";
+                FBOOKS.ID = 0;
+                bunifuTransition1.ShowSync(FBOOKS);
+
+            }
         }
 
         private void FRM_MIAN_Activated(object sender, EventArgs e)

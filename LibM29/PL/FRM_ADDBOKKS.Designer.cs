@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_ADDBOKKS));
-            this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,6 @@
             this.Lb_Ttle = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.cover = new System.Windows.Forms.PictureBox();
             this.txt_rate = new Bunifu.Framework.UI.BunifuRating();
             this.txt_date = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,38 +49,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cover = new System.Windows.Forms.PictureBox();
+            this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cover)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnadd
-            // 
-            this.btnadd.ActiveBorderThickness = 1;
-            this.btnadd.ActiveCornerRadius = 20;
-            this.btnadd.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.ActiveForecolor = System.Drawing.Color.White;
-            this.btnadd.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnadd.BackColor = System.Drawing.Color.White;
-            this.btnadd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadd.BackgroundImage")));
-            this.btnadd.ButtonText = "eklemek";
-            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.IdleBorderThickness = 1;
-            this.btnadd.IdleCornerRadius = 20;
-            this.btnadd.IdleFillColor = System.Drawing.Color.White;
-            this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Location = new System.Drawing.Point(129, 416);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(449, 53);
-            this.btnadd.TabIndex = 5;
-            this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // groupBox1
             // 
@@ -259,17 +232,6 @@
             this.linkLabel1.Text = "kapak indir";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // cover
-            // 
-            this.cover.Image = global::LibM29.Properties.Resources.borrow_book_40px;
-            this.cover.Location = new System.Drawing.Point(69, 252);
-            this.cover.Name = "cover";
-            this.cover.Size = new System.Drawing.Size(150, 108);
-            this.cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cover.TabIndex = 16;
-            this.cover.TabStop = false;
-            this.cover.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // txt_rate
             // 
             this.txt_rate.BackColor = System.Drawing.Color.Transparent;
@@ -289,10 +251,10 @@
             this.txt_date.ForeColor = System.Drawing.Color.White;
             this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txt_date.FormatCustom = null;
-            this.txt_date.Location = new System.Drawing.Point(15, 98);
+            this.txt_date.Location = new System.Drawing.Point(10, 67);
             this.txt_date.Margin = new System.Windows.Forms.Padding(6);
             this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(454, 54);
+            this.txt_date.Size = new System.Drawing.Size(454, 40);
             this.txt_date.TabIndex = 14;
             this.txt_date.Value = new System.DateTime(2023, 4, 18, 23, 39, 52, 4);
             this.txt_date.onValueChanged += new System.EventHandler(this.txt_date_onValueChanged);
@@ -315,7 +277,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(27, 120);
+            this.label6.Location = new System.Drawing.Point(16, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 9;
@@ -353,6 +315,44 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // cover
+            // 
+            this.cover.Image = global::LibM29.Properties.Resources.borrow_book_40px;
+            this.cover.Location = new System.Drawing.Point(69, 252);
+            this.cover.Name = "cover";
+            this.cover.Size = new System.Drawing.Size(150, 108);
+            this.cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cover.TabIndex = 16;
+            this.cover.TabStop = false;
+            this.cover.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.ActiveBorderThickness = 1;
+            this.btnadd.ActiveCornerRadius = 20;
+            this.btnadd.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.ActiveForecolor = System.Drawing.Color.White;
+            this.btnadd.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnadd.BackColor = System.Drawing.Color.White;
+            this.btnadd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadd.BackgroundImage")));
+            this.btnadd.ButtonText = "eklemek";
+            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.IdleBorderThickness = 1;
+            this.btnadd.IdleCornerRadius = 20;
+            this.btnadd.IdleFillColor = System.Drawing.Color.White;
+            this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.Location = new System.Drawing.Point(129, 416);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(449, 53);
+            this.btnadd.TabIndex = 5;
+            this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
             // FRM_ADDBOKKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -375,8 +375,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cover)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -98,10 +98,10 @@
             this.txt_date.ForeColor = System.Drawing.Color.White;
             this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txt_date.FormatCustom = null;
-            this.txt_date.Location = new System.Drawing.Point(19, 85);
+            this.txt_date.Location = new System.Drawing.Point(12, 67);
             this.txt_date.Margin = new System.Windows.Forms.Padding(6);
             this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(454, 54);
+            this.txt_date.Size = new System.Drawing.Size(443, 39);
             this.txt_date.TabIndex = 14;
             this.txt_date.Value = new System.DateTime(2023, 4, 18, 23, 39, 52, 4);
             // 
@@ -122,8 +122,8 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(75, 120);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(24, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 9;
@@ -135,7 +135,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(75, 42);
+            this.label7.Location = new System.Drawing.Point(24, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 19);
             this.label7.TabIndex = 7;
