@@ -34,3 +34,4 @@ C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\Li
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.PL.FRM_ADDBOKKS.resources
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.PL.FRM_DETBOOKS.resources
 C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.PL.FRM_ADDSTUDNET.resources
+C:\Users\suaad abduljalıl\OneDrive\Masaüstü\donem-projesi-Suaad-abduljalil\LibM29\obj\Debug\LibM29.PL.FRM_DETST.resources

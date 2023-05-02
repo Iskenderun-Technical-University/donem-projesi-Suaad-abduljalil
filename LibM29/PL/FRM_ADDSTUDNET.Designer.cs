@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_ADDSTUDNET));
             this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_phone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_email = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@
             this.txt_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Lb_Ttle = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_dept = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txt_scool = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cover = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txt_phone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txt_scool = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txt_dept = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cover)).BeginInit();
@@ -101,6 +101,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TEMEL BİLGİLER";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_phone.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_phone.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_phone.HintText = "";
+            this.txt_phone.isPassword = false;
+            this.txt_phone.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_phone.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_phone.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_phone.LineThickness = 4;
+            this.txt_phone.Location = new System.Drawing.Point(3, 230);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(293, 37);
+            this.txt_phone.TabIndex = 15;
+            this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_email
             // 
@@ -228,6 +248,46 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İKİNCİL BİLGİ";
             // 
+            // txt_dept
+            // 
+            this.txt_dept.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_dept.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_dept.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_dept.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_dept.HintText = "";
+            this.txt_dept.isPassword = false;
+            this.txt_dept.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_dept.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_dept.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_dept.LineThickness = 4;
+            this.txt_dept.Location = new System.Drawing.Point(10, 179);
+            this.txt_dept.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_dept.Name = "txt_dept";
+            this.txt_dept.Size = new System.Drawing.Size(293, 37);
+            this.txt_dept.TabIndex = 19;
+            this.txt_dept.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_scool
+            // 
+            this.txt_scool.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_scool.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_scool.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_scool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_scool.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_scool.HintText = "";
+            this.txt_scool.isPassword = false;
+            this.txt_scool.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_scool.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_scool.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_scool.LineThickness = 4;
+            this.txt_scool.Location = new System.Drawing.Point(10, 80);
+            this.txt_scool.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_scool.Name = "txt_scool";
+            this.txt_scool.Size = new System.Drawing.Size(293, 37);
+            this.txt_scool.TabIndex = 18;
+            this.txt_scool.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -242,7 +302,7 @@
             // cover
             // 
             this.cover.Image = global::LibM29.Properties.Resources.borrow_book_40px;
-            this.cover.Location = new System.Drawing.Point(69, 252);
+            this.cover.Location = new System.Drawing.Point(71, 252);
             this.cover.Name = "cover";
             this.cover.Size = new System.Drawing.Size(150, 108);
             this.cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,66 +365,6 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_phone.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_phone.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_phone.HintText = "";
-            this.txt_phone.isPassword = false;
-            this.txt_phone.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txt_phone.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_phone.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txt_phone.LineThickness = 4;
-            this.txt_phone.Location = new System.Drawing.Point(3, 230);
-            this.txt_phone.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(293, 37);
-            this.txt_phone.TabIndex = 15;
-            this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_scool
-            // 
-            this.txt_scool.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_scool.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_scool.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_scool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_scool.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_scool.HintText = "";
-            this.txt_scool.isPassword = false;
-            this.txt_scool.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txt_scool.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_scool.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txt_scool.LineThickness = 4;
-            this.txt_scool.Location = new System.Drawing.Point(10, 80);
-            this.txt_scool.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_scool.Name = "txt_scool";
-            this.txt_scool.Size = new System.Drawing.Size(293, 37);
-            this.txt_scool.TabIndex = 18;
-            this.txt_scool.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_dept
-            // 
-            this.txt_dept.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_dept.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_dept.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_dept.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_dept.HintText = "";
-            this.txt_dept.isPassword = false;
-            this.txt_dept.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txt_dept.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_dept.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txt_dept.LineThickness = 4;
-            this.txt_dept.Location = new System.Drawing.Point(10, 179);
-            this.txt_dept.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_dept.Name = "txt_dept";
-            this.txt_dept.Size = new System.Drawing.Size(293, 37);
-            this.txt_dept.TabIndex = 19;
-            this.txt_dept.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FRM_ADDSTUDNET
             // 

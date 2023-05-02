@@ -87,9 +87,8 @@ namespace LibM29.PL
                     MemoryStream ma = new MemoryStream();
                     cover.Image.Save(ma, System.Drawing.Imaging.ImageFormat.Jpeg);
                     //edit
-                    BL.CLS_BOOKS BLCAT = new BL.CLS_BOOKS();
-
-                   // BLCAT.update(txt_name.Text, txt_lo.Text, comboBox1.Text, txt_email.Text, txt_date.Value.ToString(), txt_rate.Value, ma,ID);
+                    BL.CLS_ST BLCAT = new BL.CLS_ST();
+                    BLCAT.update(txt_name.Text, txt_lo.Text, txt_phone.Text, txt_email.Text, txt_scool.Text, txt_dept.Text, ma, ID);
                     PL.FRM_DEDT fEdIT = new FRM_DEDT();
                     fEdIT.Show();
                     this.Close();

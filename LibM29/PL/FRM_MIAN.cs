@@ -218,7 +218,7 @@ namespace LibM29.PL
                     MessageBox.Show(ex.Message);
                 }
             }
-            else if (State =="ST")
+            else if (State == "ST")
             {
                 P_HOME.Visible = false;
                 P_MINE.Visible = true;
@@ -261,6 +261,7 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FCAT);
 
             }
+            //edit books
             else if (State == "BOOKS")
             {
                 try
@@ -298,8 +299,44 @@ namespace LibM29.PL
                 }
 
 
-            }
 
+            }
+            //edit student
+            else if (State == "ST")
+            {
+                try
+                {
+                    PL.FRM_DETST FST = new FRM_DETST();
+                    DataTable dt = new DataTable();
+                    dt = BLST.LOADEDIT(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                    object obj1 = dt.Rows[0]["NAME"];
+                    object obj2 = dt.Rows[0]["TLOACTION"];
+                    object obj3 = dt.Rows[0]["PHONE"];
+                    object obj4 = dt.Rows[0]["EMAIL"];
+                    object obj5 = dt.Rows[0]["SCHOOL"];
+                    object obj6 = dt.Rows[0]["DEP"];
+                    object obj7 = dt.Rows[0]["COVER"];
+                    FST.txt_name.Text = obj1.ToString();
+                    FST.txt_lo.Text = obj2.ToString();
+                    FST.txt_phone.Text = obj3.ToString();
+                    FST.txt_email.Text = obj4.ToString();
+                    FST.txt_school.Text = obj5.ToString();
+                    FST.txt_dept.Text = obj6.ToString();
+                    //load ımage
+                    byte[] ob = (byte[])obj7;
+                    MemoryStream ma = new MemoryStream(ob);
+                    FST.cover.Image = Image.FromStream(ma);
+
+                    bunifuTransition1.ShowSync(FST);
+
+
+                }
+                catch
+                {
+
+                }
+
+            }
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
@@ -320,7 +357,17 @@ namespace LibM29.PL
                 fdelete.Show();
 
             }
-        }
+            //delete student
+        
+            else if (State == "ST")
+            {
+                BLST.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+        fdelete.Show();
+
+            } 
+
+}
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -385,6 +432,43 @@ namespace LibM29.PL
                 catch
                 {
                 }
+
+
+            }
+            else if (State == "ST")
+            {
+                try
+                {
+                    PL.FRM_DETST FST = new FRM_DETST();
+                    DataTable dt = new DataTable();
+                    dt = BLST.LOADEDIT(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                    object obj1 = dt.Rows[0]["NAME"];
+                    object obj2 = dt.Rows[0]["TLOACTION"];
+                    object obj3 = dt.Rows[0]["PHONE"];
+                    object obj4 = dt.Rows[0]["EMAIL"];
+                    object obj5 = dt.Rows[0]["SCHOOL"];
+                    object obj6 = dt.Rows[0]["DEP"];
+                    object obj7 = dt.Rows[0]["COVER"];
+                    FST.txt_name.Text = obj1.ToString();
+                    FST.txt_lo.Text = obj2.ToString();
+                    FST.txt_phone.Text = obj3.ToString();
+                    FST.txt_email.Text = obj4.ToString();
+                    FST.txt_school.Text = obj5.ToString();
+                    FST.txt_dept.Text = obj6.ToString();
+                    //load ımage
+                    byte[] ob = (byte[])obj7;
+                    MemoryStream ma = new MemoryStream(ob);
+                    FST.cover.Image = Image.FromStream(ma);
+
+                    bunifuTransition1.ShowSync(FST);
+
+
+                }
+                catch
+                {
+
+                }
+
             }
         }
 
