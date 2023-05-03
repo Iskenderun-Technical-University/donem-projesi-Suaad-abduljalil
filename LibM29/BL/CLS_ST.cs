@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 
 namespace LibM29.BL
@@ -27,7 +28,7 @@ namespace LibM29.BL
 
         }
         //INSERT DATA
-        public void insert(string NAME, string TLOACTION, string PHONE,string EMAIL, string SCHOOL, string DEP, MemoryStream COVER)
+        public void insert(string NAME, string TLOACTION, string PHONE, string EMAIL, string SCHOOL, string DEP, MemoryStream COVER)
         {
             SqlParameter[] pr = new SqlParameter[7];
             pr[0] = new SqlParameter("NAME", NAME);
@@ -81,5 +82,16 @@ namespace LibM29.BL
             DAL.Excute("P_DELLETEST", pr);
             DAL.close();
         }
+        // SEARCH
+        public DataTable serach(string search)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+            pr[0] = new SqlParameter("SERACH", search);
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_SERACHST", pr);
+            return dt;
+
+
+        }
     }
-    }
+}

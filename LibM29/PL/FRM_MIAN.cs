@@ -24,6 +24,9 @@ namespace LibM29.PL
 
         //INSTANCE OF STUDENT
         BL.CLS_ST BLST = new BL.CLS_ST();
+
+        //INSTANCE OF SELL
+        BL.CLS_SELL BSELL = new BL.CLS_SELL();
         public FRM_MIAN()
         {
             InitializeComponent();
@@ -168,6 +171,15 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FBOOKS);
 
             }
+            //ADD SELL
+            if (State == "SELL")
+            {
+                PL.FRM_MAKESELL FSELL = new FRM_MAKESELL();
+                FSELL.btnadd.ButtonText = "eklemek";
+                FSELL.ID = 0;
+                bunifuTransition1.ShowSync(FSELL);
+
+            }
         }
 
         private void FRM_MIAN_Activated(object sender, EventArgs e)
@@ -238,6 +250,33 @@ namespace LibM29.PL
                     dataGridView1.Columns[2].HeaderText = "yaşamak";
                     dataGridView1.Columns[3].HeaderText = "telefon numarası";
                     dataGridView1.Columns[4].HeaderText = "e-posta";
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } else if (State=="SELL")
+            {
+                P_HOME.Visible = false;
+                P_MINE.Visible = true;
+                bunifuThinButton24.Visible = true;
+                State = "ST";
+                Lb_Ttle.Text = "   ÖĞRENCİLER ";
+
+
+                // load data
+                try
+                {
+                    DataTable dt = new DataTable();
+                    dt = BSELL.Load();
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[0].HeaderText = "sıralama";
+                    dataGridView1.Columns[1].HeaderText = "Kitap adı";
+                    dataGridView1.Columns[2].HeaderText = "alıcı";
+                    dataGridView1.Columns[3].HeaderText = "fiyat";
+                    dataGridView1.Columns[4].HeaderText = "tarih";
 
 
                 }
@@ -389,6 +428,16 @@ namespace LibM29.PL
 
 
             }
+
+            //SEARCH STUDENT
+            if (State == "ST")
+            {
+                DataTable dt = new DataTable();
+                dt = BLST.serach(bunifuMaterialTextbox1.Text);
+                dataGridView1.DataSource = dt;
+
+
+            }
         }
 
         private void P_MB_Paint(object sender, PaintEventArgs e)
@@ -485,6 +534,35 @@ namespace LibM29.PL
             try
             {
                 DataTable dt = new DataTable();
+                dt = BSELL.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "Kitap adı";
+                dataGridView1.Columns[2].HeaderText = "alıcı";
+                dataGridView1.Columns[3].HeaderText = "fiyat";
+                dataGridView1.Columns[4].HeaderText = "tarih";
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            P_HOME.Visible = false;
+            P_MINE.Visible = true;
+            bunifuThinButton24.Visible = false;
+            State = "SELL";
+            Lb_Ttle.Text = "  satış ";
+
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
                 dt = BLST.Load();
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns[0].HeaderText = "sıralama";
@@ -499,7 +577,8 @@ namespace LibM29.PL
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        
+}
     }
 }
     

@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Windows.Forms;
+
+namespace LibM29.BL
+{
+    internal class CLS_SELL
+    {
+        CLS_DAL DAL = new CLS_DAL();
+
+        //LOAD DATA
+        public DataTable Load()
+        {
+            SqlParameter[] pr = null;
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_LOADSELL", pr);
+            return dt;
+
+
+        }
+        //LOAD DATA BOOKS
+        public DataTable LoadBOOKS()
+        {
+            SqlParameter[] pr = null;
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_LOADSTFORSELL", pr);
+            return dt;
+
+
+        }
+        //LOAD DATA STUDENTS
+        public DataTable LoadST()
+        {
+            SqlParameter[] pr = null;
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_LOADSTFORSELL", pr);
+            return dt;
+
+
+        }
+        //INSERT DATA
+        public void insert(string SNAME, string BTITLE, string PRICE, string BDATE)
+        {
+            SqlParameter[] pr = new SqlParameter[4];
+            pr[0] = new SqlParameter("SNAME", SNAME);
+            pr[1] = new SqlParameter("BTITLE", BTITLE);
+            pr[2] = new SqlParameter("PRICE", PRICE);
+            pr[3] = new SqlParameter("BDATE", BDATE);
+            DAL.open();
+            DAL.Excute("PR_INSERTSELL", pr);
+            DAL.close();
+
+
+        }
+    }
+}
