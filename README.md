@@ -1,4 +1,6 @@
 [suaad.pdf](https://github.com/Iskenderun-Technical-University/donem-projesi-Suaad-abduljalil/files/11392002/suaad.pdf)
+
+
 Kitap yönetimi projesi, kütüphane ve eğitim ve kültür merkezleri yönetimi alanında önemli projelerden biridir. Bu proje, kitapların yönetimi için kapsamlı bir düzenleme sistemi sağlamayı ve kitapların satışı, ödünç verilmesi ve genel yönetimini kolaylaştırmayı amaçlamaktadır. Bu proje birkaç bölüm ve işlev içermekte olup, aşağıdaki gibi detaylı bir şekilde açıklamaya çalışacağız:
 
 1- Öğrenci Bölümü: Bu bölümde, kütüphaneye kayıtlı tüm öğrencilerin listesi bulunur. Bu veriler, öğrencilerin adı, öğrenci numarası, e-posta adresi, telefon numarası gibi kişisel bilgilerini içerir. Ayrıca, kullanıcılar yukarıda belirtilen verilerle öğrencileri arayabilirler.
