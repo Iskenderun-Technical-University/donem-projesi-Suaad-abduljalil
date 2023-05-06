@@ -1,4 +1,5 @@
-[suaad.pdf](https://github.com/Iskenderun-Technical-University/donem-projesi-Suaad-abduljalil/files/11392002/suaad.pdf)
+[suaadnajib.pdf](https://github.com/Iskenderun-Technical-University/donem-projesi-Suaad-abduljalil/files/11412229/suaadnajib.pdf)
+
 
 
 Kitap yönetimi projesi, kütüphane ve eğitim ve kültür merkezleri yönetimi alanında önemli projelerden biridir. Bu proje, kitapların yönetimi için kapsamlı bir düzenleme sistemi sağlamayı ve kitapların satışı, ödünç verilmesi ve genel yönetimini kolaylaştırmayı amaçlamaktadır. Bu proje birkaç bölüm ve işlev içermekte olup, aşağıdaki gibi detaylı bir şekilde açıklamaya çalışacağız:
