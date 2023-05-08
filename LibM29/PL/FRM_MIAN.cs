@@ -376,6 +376,23 @@ namespace LibM29.PL
                 }
 
             }
+            else if (State == "SELL")
+            {
+                try
+                {
+                    PL.FRM_MAKESELL FST = new FRM_MAKESELL();
+                    FST.btnadd.ButtonText = "DEĞİŞİKLİK";
+                    FST.ID=Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+                    bunifuTransition1.ShowSync(FST);
+
+
+                }
+                catch
+                {
+
+                }
+
+            }
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
@@ -404,9 +421,17 @@ namespace LibM29.PL
                 PL.FRM_DDELETE fdelete = new FRM_DDELETE();
         fdelete.Show();
 
-            } 
+            }
+            //delete student
 
-}
+            else if (State == "SELL")
+            {
+                BSELL.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+                fdelete.Show();
+
+            }
+        }
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {

@@ -58,5 +58,31 @@ namespace LibM29.BL
 
 
         }
+        //UPDATE DATA 
+        public void upadte(string SNAME, string BTITLE, int PRICE, string BDATE ,int ID)
+        {
+            SqlParameter[] pr = new SqlParameter[5];
+            pr[0] = new SqlParameter("SNAME", SNAME);
+            pr[1] = new SqlParameter("BTITLE", BTITLE);
+            pr[2] = new SqlParameter("PRICE", PRICE);
+            pr[3] = new SqlParameter("BDATE", BDATE);
+            pr[4] = new SqlParameter("ID", ID);
+            DAL.open();
+            DAL.Excute("PR_UPDATERTSELL", pr);
+            DAL.close();
+
+
+        }
+        //Delete DATA
+        public void Delete(int ID)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+
+            pr[0] = new SqlParameter("ID", ID);
+
+            DAL.open();
+            DAL.Excute("PR_SELLDELETE", pr);
+            DAL.close();
+        }
     }
 }

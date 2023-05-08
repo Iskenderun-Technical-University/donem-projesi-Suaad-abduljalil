@@ -34,7 +34,7 @@ namespace LibM29.PL
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+
         }
 
         private void FRM_ADDBOKKS_Load(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace LibM29.PL
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -73,23 +73,18 @@ namespace LibM29.PL
 
                     //ADD 
                     BL.CLS_SELL BLSELL = new BL.CLS_SELL();
-                    BLSELL.insert(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value),Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value), Convert.ToString (txt_title.Text), Convert.ToString(txt_date.Value));
+                    BLSELL.insert(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value), Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value), Convert.ToString(txt_title.Text), Convert.ToString(txt_date.Value));
                     PL.FRM_DADD Fadd = new FRM_DADD();
                     Fadd.Show();
                     this.Close();
                 }
                 else
                 {
-
-                    //MemoryStream ma = new MemoryStream();
-                    //cover.Image.Save(ma, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    ////edit
-                    //BL.CLS_BOOKS BLCAT = new BL.CLS_BOOKS();
-
-                    //BLCAT.update(txt_title.Text, txt_auther.Text, comboBox1.Text, txt_price.Text, txt_date.Value.ToString(), txt_rate.Value, ma, ID);
-                    //PL.FRM_DEDT fEdIT = new FRM_DEDT();
-                    //fEdIT.Show();
-                    //this.Close();
+                    BL.CLS_SELL BLSELL = new BL.CLS_SELL();
+                    BLSELL.upadte(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value), Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value), Convert.ToInt32(txt_title.Text), Convert.ToString(txt_date.Value), ID);
+                    PL.FRM_DEDT fEdIT = new FRM_DEDT();
+                    fEdIT.Show();
+                    this.Close();
                 }
 
             }
@@ -117,11 +112,24 @@ namespace LibM29.PL
 
                 //ADD 
                 BL.CLS_SELL BLSELL = new BL.CLS_SELL();
-                BLSELL.insert(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value), Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value), Convert.ToString(txt_title.Text), Convert.ToString(txt_date.Value));
+                BLSELL.insert(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value), Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value),Convert.ToString(txt_title.Text),Convert.ToString(txt_date.Value));
                 PL.FRM_DADD Fadd = new FRM_DADD();
                 Fadd.Show();
                 this.Close();
             }
+
+            else
+            {
+                BL.CLS_SELL BLSELL = new BL.CLS_SELL();
+                BLSELL.upadte(Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value), Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value), Convert.ToInt32(txt_title.Text), Convert.ToString(txt_date.Value), ID);
+                PL.FRM_DEDT fEdIT = new FRM_DEDT();
+                fEdIT.Show();
+                this.Close();
+            }
+
+
+
+
         }
     }
 }
