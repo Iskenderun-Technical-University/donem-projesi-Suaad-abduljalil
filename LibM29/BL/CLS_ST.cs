@@ -88,7 +88,7 @@ namespace LibM29.BL
             SqlParameter[] pr = new SqlParameter[1];
             pr[0] = new SqlParameter("SERACH", search);
             DataTable dt = new DataTable();
-            dt = DAL.read("PR_SERACHST", pr);
+            dt = DAL.read("PR_SELLSERACH", pr);
             return dt;
 
 

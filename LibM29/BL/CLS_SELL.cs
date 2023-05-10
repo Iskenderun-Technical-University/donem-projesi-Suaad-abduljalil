@@ -84,5 +84,16 @@ namespace LibM29.BL
             DAL.Excute("PR_SELLDELETE", pr);
             DAL.close();
         }
+        // SEARCH
+        public DataTable serach(string search)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+            pr[0] = new SqlParameter("SEARCH", search);
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_SELLRACHST", pr);
+            return dt;
+
+
+        }
     }
 }

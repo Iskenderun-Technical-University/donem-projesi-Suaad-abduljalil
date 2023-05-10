@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Diagnostics.Eventing.Reader;
 
 namespace LibM29.PL
 {
@@ -27,6 +27,9 @@ namespace LibM29.PL
 
         //INSTANCE OF SELL
         BL.CLS_SELL BSELL = new BL.CLS_SELL();
+        //INSTANCE OF BRO
+        BL.CLS_BOR BRO = new BL.CLS_BOR();
+
         public FRM_MIAN()
         {
             InitializeComponent();
@@ -180,9 +183,18 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FSELL);
 
             }
+            //ADD SELL
+            if (State == "BOR")
+            {
+                PL.FRM_BRO FSELL = new FRM_BRO();
+                FSELL.btnadd.ButtonText = "eklemek";
+                FSELL.ID = 0;
+                bunifuTransition1.ShowSync(FSELL);
+
+            }
         }
 
-        private void FRM_MIAN_Activated(object sender, EventArgs e)
+            private void FRM_MIAN_Activated(object sender, EventArgs e)
         {
             if (State == "CAT")
             {
@@ -257,7 +269,8 @@ namespace LibM29.PL
                 {
                     MessageBox.Show(ex.Message);
                 }
-            } else if (State=="SELL")
+            }
+            else if (State == "SELL")
             {
                 P_HOME.Visible = false;
                 P_MINE.Visible = true;
@@ -285,7 +298,38 @@ namespace LibM29.PL
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
+                if (State == "BOR")
+                {
+                    P_HOME.Visible = false;
+                    P_MINE.Visible = true;
+                    bunifuThinButton24.Visible = false;
+                    State = "BOR";
+                    Lb_Ttle.Text = " borçlanma ";
+
+
+                    // load data
+                    try
+                    {
+                        DataTable dt = new DataTable();
+                        dt = BRO.Load();
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.Columns[0].HeaderText = "sıralama";
+                        dataGridView1.Columns[1].HeaderText = "ALICI ADI";
+                        dataGridView1.Columns[2].HeaderText = "KİTAP ADI";
+                        dataGridView1.Columns[3].HeaderText = "BORÇLANMA BAŞLANGICI";
+                        dataGridView1.Columns[4].HeaderText = "BORÇLANMA SONU";
+                        dataGridView1.Columns[5].HeaderText = "FİYAT";
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
@@ -382,7 +426,23 @@ namespace LibM29.PL
                 {
                     PL.FRM_MAKESELL FST = new FRM_MAKESELL();
                     FST.btnadd.ButtonText = "DEĞİŞİKLİK";
-                    FST.ID=Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+                    FST.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+                    bunifuTransition1.ShowSync(FST);
+
+
+                }
+                catch
+                {
+
+                }
+            }
+            else if (State == "BOR")
+            {
+                try
+                {
+                    PL.FRM_BRO FST = new FRM_BRO();
+                    FST.btnadd.ButtonText = "DEĞİŞİKLİK";
+                    FST.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
                     bunifuTransition1.ShowSync(FST);
 
 
@@ -459,6 +519,15 @@ namespace LibM29.PL
             {
                 DataTable dt = new DataTable();
                 dt = BLST.serach(bunifuMaterialTextbox1.Text);
+                dataGridView1.DataSource = dt;
+
+
+            }
+            //SEARCH SELL
+            if (State == "SELL")
+            {
+                DataTable dt = new DataTable();
+                dt = BSELL.serach(bunifuMaterialTextbox1.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -602,8 +671,40 @@ namespace LibM29.PL
             {
                 MessageBox.Show(ex.Message);
             }
+            
         
 }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            P_HOME.Visible = false;
+            P_MINE.Visible = true;
+            bunifuThinButton24.Visible = false;
+            State = "BOR";
+            Lb_Ttle.Text = "borçlanma ";
+
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BRO.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "ALICI ADI";
+                dataGridView1.Columns[2].HeaderText = "KİTAP ADI";
+                dataGridView1.Columns[3].HeaderText = "BORÇLANMA BAŞLANGICI";
+                dataGridView1.Columns[4].HeaderText = "BORÇLANMA SONU";
+                dataGridView1.Columns[5].HeaderText = "FİYAT";
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
     
