@@ -71,7 +71,14 @@
     <Compile Include="BL\CLS_BOOKS.cs" />
     <Compile Include="BL\CLS_CAT.cs" />
     <Compile Include="BL\CLS_ST.cs" />
+    <Compile Include="BL\CLS_USER.cs" />
     <Compile Include="DAL\CLS_DAL.cs" />
+    <Compile Include="PL\FRM_ADDUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADDUSER.Designer.cs">
+      <DependentUpon>FRM_ADDUSER.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_ERRORINSERT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\FRM_ADDUSER.resx">
+      <DependentUpon>FRM_ADDUSER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_ERRORINSERT.resx">
       <DependentUpon>FRM_ERRORINSERT.cs</DependentUpon>
     </EmbeddedResource>

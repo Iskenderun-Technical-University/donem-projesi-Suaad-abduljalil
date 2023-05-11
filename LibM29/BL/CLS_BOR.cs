@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using static System.Windows.Forms.AxHost;
+using System.Windows.Forms;
 
 
 namespace LibM29.BL
@@ -44,8 +45,10 @@ namespace LibM29.BL
 
 
         }
-        //INSERT DATA
-        public void insert(string BNAME, string BTITLE,string BDATE1,string BDATE2, int PRICE)
+
+
+            //INSERT DATA
+            public void insert(string BNAME, string BTITLE, string BDATE1, string BDATE2, int PRICE)
         {
             SqlParameter[] pr = new SqlParameter[5];
             pr[0] = new SqlParameter("BNAME", BNAME);
@@ -53,7 +56,7 @@ namespace LibM29.BL
             pr[2] = new SqlParameter("BDATE1", BDATE1);
             pr[3] = new SqlParameter("BDATE2", BDATE2);
             pr[4] = new SqlParameter("PRICE", PRICE);
-            
+
             DAL.open();
             DAL.Excute("PR_INSERTBOR", pr);
             DAL.close();
@@ -61,7 +64,7 @@ namespace LibM29.BL
 
         }
         //UPADTE DATA
-        public void insert(string BNAME, string BTITLE, string BDATE1, string BDATE2, int PRICE ,int ID)
+        public void insert(string BNAME, string BTITLE, string BDATE1, string BDATE2, int PRICE, int ID)
         {
             SqlParameter[] pr = new SqlParameter[6];
             pr[0] = new SqlParameter("BNAME", BNAME);
@@ -78,5 +81,29 @@ namespace LibM29.BL
 
 
         }
+
+        //Delete DATA
+        public void Delete(int ID)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+
+            pr[0] = new SqlParameter("ID", ID);
+
+            DAL.open();
+            DAL.Excute("PR_DELETBOR", pr);
+            DAL.close();
+        }
+        // SEARCH
+        public DataTable serach(string search)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+            pr[0] = new SqlParameter("SEARCH", search);
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_BORSERACH", pr);
+            return dt;
+
+
+        }
     }
+
 }

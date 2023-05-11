@@ -29,6 +29,8 @@ namespace LibM29.PL
         BL.CLS_SELL BSELL = new BL.CLS_SELL();
         //INSTANCE OF BRO
         BL.CLS_BOR BRO = new BL.CLS_BOR();
+        //INSTANCE OF USER
+        BL.CLS_USER BLUSER = new BL.CLS_USER();
 
         public FRM_MIAN()
         {
@@ -183,13 +185,22 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FSELL);
 
             }
-            //ADD SELL
+            //ADD BOR
             if (State == "BOR")
             {
                 PL.FRM_BRO FSELL = new FRM_BRO();
                 FSELL.btnadd.ButtonText = "eklemek";
                 FSELL.ID = 0;
                 bunifuTransition1.ShowSync(FSELL);
+
+            }
+            //ADD USER
+            if (State == "USER")
+            {
+                PL.FRM_ADDUSER FUSER = new FRM_ADDUSER();
+                FUSER.btnadd.ButtonText = "eklemek";
+               // FUSER.ID = 0;
+                bunifuTransition1.ShowSync(FUSER);
 
             }
         }
@@ -327,7 +338,39 @@ namespace LibM29.PL
                     {
                         MessageBox.Show(ex.Message);
                     }
+                if (State == "USER")
+                {
+
+                    P_HOME.Visible = false;
+                    P_MINE.Visible = true;
+                    bunifuThinButton24.Visible = false;
+                    State = "USER";
+                    Lb_Ttle.Text = " KULLANICILAR";
+
+
+                    // load data
+                    try
+                    {
+                        DataTable dt = new DataTable();
+                        dt = BLUSER.Load();
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.Columns[0].HeaderText = "sıralama";
+                        dataGridView1.Columns[1].HeaderText = "AD SOYAD";
+                        dataGridView1.Columns[2].HeaderText = "KULLANICI ADI";
+                        dataGridView1.Columns[3].HeaderText = "ŞİFRE";
+                        dataGridView1.Columns[4].HeaderText = "GEÇERLİLİK";
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
+                }
+
             }
         
 
@@ -482,7 +525,7 @@ namespace LibM29.PL
         fdelete.Show();
 
             }
-            //delete student
+            //delete sell
 
             else if (State == "SELL")
             {
@@ -490,8 +533,17 @@ namespace LibM29.PL
                 PL.FRM_DDELETE fdelete = new FRM_DDELETE();
                 fdelete.Show();
 
+            } //delete bor
+
+            else if (State == "BOR")
+            {
+                BRO.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+                fdelete.Show();
+
             }
-        }
+        
+    }
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -528,6 +580,15 @@ namespace LibM29.PL
             {
                 DataTable dt = new DataTable();
                 dt = BSELL.serach(bunifuMaterialTextbox1.Text);
+                dataGridView1.DataSource = dt;
+
+
+            }
+            //SEARCH BOR
+            if (State == "BOR")
+            {
+                DataTable dt = new DataTable();
+                dt = BRO.serach(bunifuMaterialTextbox1.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -696,6 +757,37 @@ namespace LibM29.PL
                 dataGridView1.Columns[3].HeaderText = "BORÇLANMA BAŞLANGICI";
                 dataGridView1.Columns[4].HeaderText = "BORÇLANMA SONU";
                 dataGridView1.Columns[5].HeaderText = "FİYAT";
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            P_HOME.Visible = false;
+            P_MINE.Visible = true;
+            bunifuThinButton24.Visible = false;
+            State = "USER";
+            Lb_Ttle.Text = " KULLANICILAR";
+
+
+            // load data
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLUSER.Load();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "sıralama";
+                dataGridView1.Columns[1].HeaderText = "AD SOYAD";
+                dataGridView1.Columns[2].HeaderText = "KULLANICI ADI";
+                dataGridView1.Columns[3].HeaderText = "ŞİFRE";
+                dataGridView1.Columns[4].HeaderText = "GEÇERLİLİK";
+               
 
 
 

@@ -44,6 +44,8 @@ namespace LibM29.BL
 
 
         }
+      
+
         //INSERT DATA
         public void insert(string SNAME, string BTITLE, string PRICE, string BDATE)
         {
