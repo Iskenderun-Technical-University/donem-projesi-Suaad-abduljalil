@@ -22,5 +22,21 @@ namespace LibM29.BL
 
 
         }
+        //INSERT DATA
+        public void insert(string CNAME, string CUSER, string CPASSWORD, string CPREM, string CSTATE)
+        {
+            SqlParameter[] pr = new SqlParameter[5];
+            pr[0] = new SqlParameter("CNAME", CNAME);
+            pr[1] = new SqlParameter("CUSER", CUSER);
+            pr[2] = new SqlParameter("CPASSWORD", CPASSWORD);
+            pr[3] = new SqlParameter("CPREM", CPREM);
+            pr[4] = new SqlParameter("CSTATE", CSTATE);
+
+            DAL.open();
+            DAL.Excute("PR_INSERTUSER", pr);
+            DAL.close();
+
+
+        }
     }
 }
