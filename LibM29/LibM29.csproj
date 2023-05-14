@@ -91,6 +91,12 @@
     <Compile Include="PL\FRM_BRO.Designer.cs">
       <DependentUpon>FRM_BRO.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_LOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_LOG.Designer.cs">
+      <DependentUpon>FRM_LOG.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_MAKESELL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_BRO.resx">
       <DependentUpon>FRM_BRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_LOG.resx">
+      <DependentUpon>FRM_LOG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MAKESELL.resx">
       <DependentUpon>FRM_MAKESELL.cs</DependentUpon>

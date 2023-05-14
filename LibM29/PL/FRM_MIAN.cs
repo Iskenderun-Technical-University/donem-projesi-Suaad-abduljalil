@@ -90,6 +90,7 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = true;
+            txt_serach.Visible = true;
             State = "BOOKS";
             Lb_Ttle.Text = "    KİTABLAR ";
 
@@ -118,6 +119,8 @@ namespace LibM29.PL
         {
             P_HOME.Visible = false;
             P_MINE.Visible = true;
+            txt_serach.Visible = true;
+
             State = "CAT";
             Lb_Ttle.Text = "    TÜRLER  ";
 
@@ -559,8 +562,17 @@ namespace LibM29.PL
                 fdelete.Show();
 
             }
-        
-    }
+            //delete user
+
+            else if (State == "USER")
+            {
+                BLUSER.Delete(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
+                PL.FRM_DDELETE fdelete = new FRM_DDELETE();
+                fdelete.Show();
+
+            }
+
+        }
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -568,7 +580,7 @@ namespace LibM29.PL
             if (State == "CAT")
             {
                 DataTable dt = new DataTable();
-                dt = BLBOOKS.serach(bunifuMaterialTextbox1.Text);
+                dt = BLBOOKS.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -577,7 +589,7 @@ namespace LibM29.PL
             if (State == "BOOKS")
             {
                 DataTable dt = new DataTable();
-                dt = BLCAT.serach(bunifuMaterialTextbox1.Text);
+                dt = BLCAT.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -587,7 +599,7 @@ namespace LibM29.PL
             if (State == "ST")
             {
                 DataTable dt = new DataTable();
-                dt = BLST.serach(bunifuMaterialTextbox1.Text);
+                dt = BLST.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -596,7 +608,7 @@ namespace LibM29.PL
             if (State == "SELL")
             {
                 DataTable dt = new DataTable();
-                dt = BSELL.serach(bunifuMaterialTextbox1.Text);
+                dt = BSELL.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -605,7 +617,7 @@ namespace LibM29.PL
             if (State == "BOR")
             {
                 DataTable dt = new DataTable();
-                dt = BRO.serach(bunifuMaterialTextbox1.Text);
+                dt = BRO.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
 
 
@@ -698,6 +710,8 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = true;
+            txt_serach.Visible = true;
+
             State = "ST";
             Lb_Ttle.Text = "   ÖĞRENCİLER ";
 
@@ -727,6 +741,8 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = false;
+            txt_serach.Visible = true;
+
             State = "SELL";
             Lb_Ttle.Text = "  satış ";
 
@@ -758,6 +774,8 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = false;
+            txt_serach.Visible = true;
+
             State = "BOR";
             Lb_Ttle.Text = "borçlanma ";
 
@@ -789,6 +807,8 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = false;
+            txt_serach.Visible = false;
+
             State = "USER";
             Lb_Ttle.Text = " KULLANICILAR";
 

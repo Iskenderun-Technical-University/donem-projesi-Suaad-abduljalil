@@ -54,5 +54,16 @@ namespace LibM29.BL
 
 
         }
+        //Delete DATA
+        public void Delete(int ID)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+
+            pr[0] = new SqlParameter("ID", ID);
+
+            DAL.open();
+            DAL.Excute("PR_DELETEUSER", pr);
+            DAL.close();
+        }
     }
 }
