@@ -38,5 +38,21 @@ namespace LibM29.BL
 
 
         }
+        //UPDATE DATA
+        public void upadte(string CNAME, string CUSER, string CPASSWORD, string CPREM, int ID)
+        {
+            SqlParameter[] pr = new SqlParameter[5];
+            pr[0] = new SqlParameter("CNAME", CNAME);
+            pr[1] = new SqlParameter("CUSER", CUSER);
+            pr[2] = new SqlParameter("CPASSWORD", CPASSWORD);
+            pr[3] = new SqlParameter("CPREM", CPREM);
+            pr[4] = new SqlParameter("ID", ID);
+
+            DAL.open();
+            DAL.Excute("PR_EDITUSER", pr);
+            DAL.close();
+
+
+        }
     }
 }

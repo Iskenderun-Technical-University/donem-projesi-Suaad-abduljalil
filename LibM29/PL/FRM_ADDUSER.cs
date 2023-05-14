@@ -61,12 +61,12 @@ namespace LibM29.PL
                 {
 
 
-                    ////edit
-                    //BL.CLS_ST BLCAT = new BL.CLS_ST();
-                    //BLCAT.update(txt_name.Text, txt_lo.Text, txt_phone.Text, txt_email.Text, txt_scool.Text, txt_dept.Text, ma, ID);
-                    //PL.FRM_DEDT fEdIT = new FRM_DEDT();
-                    //fEdIT.Show();
-                    //this.Close();
+                    //edit
+                    BL.CLS_USER BLUSER = new BL.CLS_USER();
+                    BLUSER.upadte(txt_name.Text, txt_user.Text, txt_password.Text, txt_prem.Text, ID);
+                    PL.FRM_DEDT fEdIT = new FRM_DEDT();
+                    fEdIT.Show();
+                    this.Close();
                 }
             }
         }

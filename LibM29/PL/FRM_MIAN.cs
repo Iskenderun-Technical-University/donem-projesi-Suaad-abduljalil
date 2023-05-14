@@ -199,7 +199,7 @@ namespace LibM29.PL
             {
                 PL.FRM_ADDUSER FUSER = new FRM_ADDUSER();
                 FUSER.btnadd.ButtonText = "eklemek";
-               // FUSER.ID = 0;
+                FUSER.ID = 0;
                 bunifuTransition1.ShowSync(FUSER);
 
             }
@@ -496,7 +496,24 @@ namespace LibM29.PL
                 }
 
             }
-        }
+            else if (State == "USER")
+            {
+                try
+                {
+                    PL.FRM_ADDUSER FUSER = new FRM_ADDUSER();
+                    FUSER.btnadd.ButtonText = "DEĞİŞİKLİK";
+                    FUSER.ID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+                    bunifuTransition1.ShowSync(FUSER);
+
+
+                }
+                catch
+                {
+
+                }
+            }
+
+            }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
