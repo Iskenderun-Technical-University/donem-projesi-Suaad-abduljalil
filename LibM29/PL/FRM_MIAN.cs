@@ -834,6 +834,15 @@ namespace LibM29.PL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            PL.FRM_LOG Login = new FRM_LOG();
+            BLUSER.logout();
+            this.Hide();
+            Login.Show();
+
+        }
     }
 }
     

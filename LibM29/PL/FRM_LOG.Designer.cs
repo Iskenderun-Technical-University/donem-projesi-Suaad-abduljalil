@@ -52,6 +52,7 @@
             this.bunifuImageButton1.TabIndex = 2;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // txt_password
             // 
@@ -93,7 +94,7 @@
             this.txt_user.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_user.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_user.HintText = "SA@H.COM";
+            this.txt_user.HintText = "";
             this.txt_user.isPassword = false;
             this.txt_user.LineFocusedColor = System.Drawing.Color.Blue;
             this.txt_user.LineIdleColor = System.Drawing.Color.Gray;
@@ -144,6 +145,7 @@
             this.btnadd.Size = new System.Drawing.Size(226, 53);
             this.btnadd.TabIndex = 19;
             this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // label3
             // 
@@ -171,7 +173,7 @@
             this.Controls.Add(this.bunifuImageButton1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "FRM_LOG";
             this.Text = "FRM_LOG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

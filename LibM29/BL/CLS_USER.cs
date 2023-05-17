@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace LibM29.BL
 {
@@ -65,5 +66,44 @@ namespace LibM29.BL
             DAL.Excute("PR_DELETEUSER", pr);
             DAL.close();
         }
+        //logout
+        public void logout()
+        {
+            SqlParameter[] pr = null;
+
+            DAL.open();
+            DAL.Excute("PR_LOGOUT", pr);
+            DAL.close();
+
+
+        } 
+        //LOAD DATA FOR LOGİN
+        public DataTable Login(string CUSER , string CPASSWORD)
+        {
+            SqlParameter[] pr = new SqlParameter[2];
+            pr[0] = new SqlParameter("CUSER", CUSER);
+            pr[1] = new SqlParameter("CPASSWORD", CPASSWORD);
+
+
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_LOGIN", pr);
+            return dt;
+
+
+        }
+        //UPDATE DATA FOR LOGIN
+        public void upadteLOGIN( string CUSER, string CPASSWORD)
+        {
+            SqlParameter[] pr = new SqlParameter[2];
+            pr[0] = new SqlParameter("CUSER", CUSER);
+            pr[1] = new SqlParameter("CPASSWORD", CPASSWORD);
+      
+            DAL.open();
+            DAL.Excute("PR_updatelogin", pr);
+            DAL.close();
+
+
+        }
+    } 
     }
-}
+
