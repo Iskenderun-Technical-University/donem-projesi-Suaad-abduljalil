@@ -35,6 +35,8 @@
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MIAN));
             this.P_MB = new System.Windows.Forms.Panel();
+            this.lb_prem = new System.Windows.Forms.Label();
+            this.lb_name = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -118,6 +120,8 @@
             // P_MB
             // 
             this.P_MB.BackColor = System.Drawing.Color.Teal;
+            this.P_MB.Controls.Add(this.lb_prem);
+            this.P_MB.Controls.Add(this.lb_name);
             this.P_MB.Controls.Add(this.button7);
             this.P_MB.Controls.Add(this.button6);
             this.P_MB.Controls.Add(this.button5);
@@ -135,6 +139,32 @@
             this.P_MB.Size = new System.Drawing.Size(175, 512);
             this.P_MB.TabIndex = 0;
             this.P_MB.Paint += new System.Windows.Forms.PaintEventHandler(this.P_MB_Paint);
+            // 
+            // lb_prem
+            // 
+            this.lb_prem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_prem.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_prem, BunifuAnimatorNS.DecorationType.None);
+            this.lb_prem.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_prem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lb_prem.Location = new System.Drawing.Point(77, 111);
+            this.lb_prem.Name = "lb_prem";
+            this.lb_prem.Size = new System.Drawing.Size(50, 18);
+            this.lb_prem.TabIndex = 13;
+            this.lb_prem.Text = "müdür";
+            // 
+            // lb_name
+            // 
+            this.lb_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_name.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_name, BunifuAnimatorNS.DecorationType.None);
+            this.lb_name.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.ForeColor = System.Drawing.Color.Transparent;
+            this.lb_name.Location = new System.Drawing.Point(57, 88);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(60, 23);
+            this.lb_name.TabIndex = 12;
+            this.lb_name.Text = "suaad";
             // 
             // button7
             // 
@@ -263,6 +293,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = global::LibM29.Properties.Resources._236831;
             this.pictureBox1.Location = new System.Drawing.Point(42, 4);
@@ -1046,6 +1077,7 @@
             this.Activated += new System.EventHandler(this.FRM_MIAN_Activated);
             this.Load += new System.EventHandler(this.FRM_MIAN_Load);
             this.P_MB.ResumeLayout(false);
+            this.P_MB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.P_TB.ResumeLayout(false);
@@ -1137,5 +1169,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_serach;
         private System.Windows.Forms.Panel P_CONTA;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        public System.Windows.Forms.Label lb_prem;
+        public System.Windows.Forms.Label lb_name;
     }
 }

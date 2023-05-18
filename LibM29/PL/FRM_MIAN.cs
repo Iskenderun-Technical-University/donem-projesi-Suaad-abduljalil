@@ -210,6 +210,21 @@ namespace LibM29.PL
 
             private void FRM_MIAN_Activated(object sender, EventArgs e)
         {
+
+            // for prem
+            if(lb_prem.Text == "MÜDÜR")
+            {
+                bunifuThinButton23.Enabled = true;
+                button6.Enabled = true;
+            }
+            else
+            {
+                bunifuThinButton23.Enabled = false;
+                button6.Enabled = false;
+
+            }
+
+
             if (State == "CAT")
             {
                 // load data cat

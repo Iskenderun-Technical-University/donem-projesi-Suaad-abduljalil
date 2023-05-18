@@ -26,7 +26,7 @@ namespace LibM29.PL
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -40,6 +40,12 @@ namespace LibM29.PL
                 {
                     CLSUSER.upadteLOGIN(txt_user.Text, txt_password.Text);
                     PL.FRM_MIAN frmmain = new FRM_MIAN();
+                    object lbname = dt.Rows[0]["CNAME"];
+                    object lbprem = dt.Rows[0]["CPREM"];
+                    frmmain.lb_name.Text = lbname.ToString();
+                    frmmain.lb_prem.Text = lbprem.ToString();
+
+
                     frmmain.Show();
                     this.Close();
                 }
@@ -51,6 +57,11 @@ namespace LibM29.PL
                 MessageBox.Show(ex.Message);
 
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

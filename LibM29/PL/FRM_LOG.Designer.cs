@@ -36,7 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton1
@@ -45,7 +47,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::LibM29.Properties.Resources.delete_sign_64px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(409, -1);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(469, -1);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(42, 39);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,10 +69,10 @@
             this.txt_password.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_password.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txt_password.LineThickness = 4;
-            this.txt_password.Location = new System.Drawing.Point(83, 252);
+            this.txt_password.Location = new System.Drawing.Point(153, 309);
             this.txt_password.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(293, 37);
+            this.txt_password.Size = new System.Drawing.Size(217, 39);
             this.txt_password.TabIndex = 18;
             this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -78,11 +80,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(88, 224);
+            this.label2.Location = new System.Drawing.Point(61, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 17;
             this.label2.Text = "ŞİFRE";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -100,10 +102,10 @@
             this.txt_user.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_user.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txt_user.LineThickness = 4;
-            this.txt_user.Location = new System.Drawing.Point(83, 168);
+            this.txt_user.Location = new System.Drawing.Point(153, 259);
             this.txt_user.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(293, 37);
+            this.txt_user.Size = new System.Drawing.Size(217, 36);
             this.txt_user.TabIndex = 16;
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -111,13 +113,14 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(88, 140);
+            this.label1.Location = new System.Drawing.Point(33, 277);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 23);
+            this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "KULLANICI ADI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnadd
             // 
@@ -139,10 +142,10 @@
             this.btnadd.IdleFillColor = System.Drawing.Color.White;
             this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Location = new System.Drawing.Point(108, 310);
+            this.btnadd.Location = new System.Drawing.Point(83, 384);
             this.btnadd.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(226, 53);
+            this.btnadd.Size = new System.Drawing.Size(317, 48);
             this.btnadd.TabIndex = 19;
             this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
@@ -153,17 +156,28 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(127, 24);
+            this.label3.Location = new System.Drawing.Point(157, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 35);
             this.label3.TabIndex = 20;
             this.label3.Text = "KAYIT OLMAK";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibM29.Properties.Resources._236831;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // FRM_LOG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 388);
+            this.ClientSize = new System.Drawing.Size(509, 466);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.txt_password);
@@ -176,8 +190,8 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "FRM_LOG";
             this.Text = "FRM_LOG";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +206,6 @@
         private System.Windows.Forms.Label label1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnadd;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
