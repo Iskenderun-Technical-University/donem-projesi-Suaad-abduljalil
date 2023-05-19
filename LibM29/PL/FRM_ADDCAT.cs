@@ -57,5 +57,10 @@ namespace LibM29.PL
         {
 
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

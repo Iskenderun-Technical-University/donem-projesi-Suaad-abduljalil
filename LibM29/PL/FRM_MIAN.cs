@@ -68,12 +68,29 @@ namespace LibM29.PL
                 button1.RightToLeft = RightToLeft.Yes;
                 button2.RightToLeft = RightToLeft.Yes;
                 button3.RightToLeft = RightToLeft.Yes;
-                button4.RightToLeft = RightToLeft.Yes;
+                button4.RightToLeft = RightToLeft.Yes; 
+                button5.RightToLeft = RightToLeft.Yes;
+                button6.RightToLeft = RightToLeft.Yes;
+                button7.RightToLeft = RightToLeft.Yes;
+                lb_name.Visible = false;
+                lb_prem.Visible = false;
+
+
+
 
             }
             else
             {
                 P_MB.Width = 175;
+                button1.RightToLeft = RightToLeft.Yes;
+                button2.RightToLeft = RightToLeft.Yes;
+                button3.RightToLeft = RightToLeft.Yes;
+                button4.RightToLeft = RightToLeft.Yes;
+                button5.RightToLeft = RightToLeft.Yes;
+                button6.RightToLeft = RightToLeft.Yes;
+                button7.RightToLeft = RightToLeft.Yes;
+                lb_name.Visible = true;
+                lb_prem.Visible = true;
 
 
 
@@ -82,6 +99,11 @@ namespace LibM29.PL
 
         private void button1_Click(object sender, EventArgs e)
         {
+            P_HOME.Visible = true;
+            P_MINE.Visible = false;
+           
+            Lb_Ttle.Text = "  A N A ";
+
 
         }
 
@@ -210,9 +232,83 @@ namespace LibM29.PL
 
             private void FRM_MIAN_Activated(object sender, EventArgs e)
         {
+            //FOR CHECK NuMBER
+            //BOOK
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLBOOKS.Load();
+                label3.Text = dt.Rows.Count.ToString();
 
+
+            }
+            catch { }
+
+            //for check number students
+
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BSELL.Load();
+                label4.Text = dt.Rows.Count.ToString();
+
+
+            }
+            catch 
+            {
+               
+            }
+
+            //for check number satış
+
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLST.Load();
+                label6.Text = dt.Rows.Count.ToString();
+            }
+            catch 
+            {
+               
+            }
+            //for check number BORÇLANMA
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BRO.Load();
+                label12.Text = dt.Rows.Count.ToString();
+            }
+            catch 
+            {
+                
+            }
+            //for check number TÜRLER
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLCAT.Load();
+                label10.Text = dt.Rows.Count.ToString();
+
+
+            }
+            catch 
+            {
+               
+            }
+            //for check number KULLANICILAR
+
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = BLUSER.Load();
+                label8.Text = dt.Rows.Count.ToString();
+            }
+            catch
+            {
+                
+            }
             // for prem
-            if(lb_prem.Text == "MÜDÜR")
+            if (lb_prem.Text == "MÜDÜR")
             {
                 bunifuThinButton23.Enabled = true;
                 button6.Enabled = true;
@@ -858,7 +954,69 @@ namespace LibM29.PL
             Login.Show();
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //ADD CATEGORE
+            
+                PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
+                FCAT.btnadd.ButtonText = "eklemek";
+                FCAT.ID = 0;
+                bunifuTransition1.ShowSync(FCAT);
+
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //ADD BOR
+           
+                PL.FRM_BRO FSELL = new FRM_BRO();
+                FSELL.btnadd.ButtonText = "eklemek";
+                FSELL.ID = 0;
+                bunifuTransition1.ShowSync(FSELL);
+
+           
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //ADD SELL
+            
+                PL.FRM_MAKESELL FSELL = new FRM_MAKESELL();
+                FSELL.btnadd.ButtonText = "eklemek";
+                FSELL.ID = 0;
+                bunifuTransition1.ShowSync(FSELL);
+
+            }
+            
+
+            private void button9_Click(object sender, EventArgs e)
+        {
+           
+            //ADD STUDENT
+           
+                PL.FRM_ADDSTUDNET FBOOKS = new FRM_ADDSTUDNET();
+                FBOOKS.btnadd.ButtonText = "eklemek";
+                FBOOKS.ID = 0;
+                bunifuTransition1.ShowSync(FBOOKS);
+
+            }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //ADD books
+            
+            
+                PL.FRM_ADDBOKKS FBOOKS = new FRM_ADDBOKKS();
+                FBOOKS.btnadd.ButtonText = "eklemek";
+                FBOOKS.ID = 0;
+                bunifuTransition1.ShowSync(FBOOKS);
+
+           
+        }
     }
-}
+    }
     
+  
 
