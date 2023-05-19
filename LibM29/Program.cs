@@ -16,7 +16,7 @@ namespace LibM29
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PL.FRM_MIAN());
+            Application.Run(new PL.FRM_START());
         }
     }
 }

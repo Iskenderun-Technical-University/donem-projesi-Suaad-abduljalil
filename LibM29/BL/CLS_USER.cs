@@ -104,6 +104,16 @@ namespace LibM29.BL
 
 
         }
+        //LOAD DATA FOR CHECK  START
+        public DataTable STARTLOADDTA()
+        {
+            SqlParameter[] pr = null;
+            DataTable dt = new DataTable();
+            dt = DAL.read("PR_START", pr);
+            return dt;
+
+
+        }
     } 
     }
 

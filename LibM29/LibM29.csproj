@@ -163,6 +163,12 @@
     <Compile Include="PL\FRM_MIAN.Designer.cs">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_START.Designer.cs">
+      <DependentUpon>FRM_START.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\FRM_ADDUSER.resx">
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MIAN.resx">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_START.resx">
+      <DependentUpon>FRM_START.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
