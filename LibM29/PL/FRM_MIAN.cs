@@ -945,7 +945,6 @@ namespace LibM29.PL
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
             PL.FRM_LOG Login = new FRM_LOG();
@@ -958,25 +957,19 @@ namespace LibM29.PL
         private void button12_Click(object sender, EventArgs e)
         {
             //ADD CATEGORE
-            
                 PL.FRM_ADDCAT FCAT = new FRM_ADDCAT();
                 FCAT.btnadd.ButtonText = "eklemek";
                 FCAT.ID = 0;
-                bunifuTransition1.ShowSync(FCAT);
-
-            
+                bunifuTransition1.ShowSync(FCAT);  
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             //ADD BOR
-           
                 PL.FRM_BRO FSELL = new FRM_BRO();
                 FSELL.btnadd.ButtonText = "eklemek";
                 FSELL.ID = 0;
-                bunifuTransition1.ShowSync(FSELL);
-
-           
+                bunifuTransition1.ShowSync(FSELL);       
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -989,31 +982,22 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FSELL);
 
             }
-            
-
             private void button9_Click(object sender, EventArgs e)
         {
-           
             //ADD STUDENT
-           
                 PL.FRM_ADDSTUDNET FBOOKS = new FRM_ADDSTUDNET();
                 FBOOKS.btnadd.ButtonText = "eklemek";
                 FBOOKS.ID = 0;
                 bunifuTransition1.ShowSync(FBOOKS);
 
-            }
-
+            } 
         private void button8_Click(object sender, EventArgs e)
         {
             //ADD books
-            
-            
                 PL.FRM_ADDBOKKS FBOOKS = new FRM_ADDBOKKS();
                 FBOOKS.btnadd.ButtonText = "eklemek";
                 FBOOKS.ID = 0;
                 bunifuTransition1.ShowSync(FBOOKS);
-
-           
         }
     }
     }

@@ -163,6 +163,12 @@
     <Compile Include="PL\FRM_MIAN.Designer.cs">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_REPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_REPORT.Designer.cs">
+      <DependentUpon>FRM_REPORT.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_START.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MIAN.resx">
       <DependentUpon>FRM_MIAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_REPORT.resx">
+      <DependentUpon>FRM_REPORT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_START.resx">
       <DependentUpon>FRM_START.cs</DependentUpon>
