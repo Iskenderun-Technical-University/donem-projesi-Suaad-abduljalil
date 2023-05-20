@@ -30,9 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_REPORT));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lb_date = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lb_perm = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lb_name = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Lb_Ttle = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,14 +56,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Lb_Ttle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.btnadd = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,12 +73,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lb_date);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.lb_perm);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.lb_name);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Lb_Ttle);
@@ -85,88 +90,109 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(12, 89);
+            this.panel1.Location = new System.Drawing.Point(0, 89);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 1123);
             this.panel1.TabIndex = 0;
             // 
-            // btnadd
+            // lb_date
             // 
-            this.btnadd.ActiveBorderThickness = 1;
-            this.btnadd.ActiveCornerRadius = 20;
-            this.btnadd.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.ActiveForecolor = System.Drawing.Color.White;
-            this.btnadd.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnadd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnadd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadd.BackgroundImage")));
-            this.btnadd.ButtonText = "yazdırma ayarları";
-            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.IdleBorderThickness = 1;
-            this.btnadd.IdleCornerRadius = 20;
-            this.btnadd.IdleFillColor = System.Drawing.Color.White;
-            this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Location = new System.Drawing.Point(543, 14);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(246, 67);
-            this.btnadd.TabIndex = 6;
-            this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_date.AutoSize = true;
+            this.lb_date.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_date.ForeColor = System.Drawing.Color.Black;
+            this.lb_date.Location = new System.Drawing.Point(399, 206);
+            this.lb_date.Name = "lb_date";
+            this.lb_date.Size = new System.Drawing.Size(64, 19);
+            this.lb_date.TabIndex = 19;
+            this.lb_date.Text = "MÜDÜR";
+            this.lb_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuThinButton21
+            // label19
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "baskıyı görüntüle";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(283, 16);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(254, 67);
-            this.bunifuThinButton21.TabIndex = 7;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(51, 206);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(247, 19);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "RAPORUN DÜZENLENME TARİHİ";
             // 
-            // bunifuThinButton22
+            // lb_perm
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Raporu yazdır";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(28, 16);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(252, 67);
-            this.bunifuThinButton22.TabIndex = 8;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_perm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_perm.AutoSize = true;
+            this.lb_perm.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_perm.ForeColor = System.Drawing.Color.Black;
+            this.lb_perm.Location = new System.Drawing.Point(399, 132);
+            this.lb_perm.Name = "lb_perm";
+            this.lb_perm.Size = new System.Drawing.Size(64, 19);
+            this.lb_perm.TabIndex = 17;
+            this.lb_perm.Text = "MÜDÜR";
+            this.lb_perm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(118, 132);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(95, 19);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "GEÇERLİLİK";
+            // 
+            // lb_name
+            // 
+            this.lb_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_name.AutoSize = true;
+            this.lb_name.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.ForeColor = System.Drawing.Color.Black;
+            this.lb_name.Location = new System.Drawing.Point(390, 73);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(113, 19);
+            this.lb_name.TabIndex = 15;
+            this.lb_name.Text = "SUAAD NAJLB";
+            this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(107, 73);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 19);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "MUHABİRİN ADI";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(66, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 33);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "GENEL BİLGİLER";
+            // 
+            // Lb_Ttle
+            // 
+            this.Lb_Ttle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lb_Ttle.AutoSize = true;
+            this.Lb_Ttle.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Ttle.ForeColor = System.Drawing.Color.Black;
+            this.Lb_Ttle.Location = new System.Drawing.Point(64, 376);
+            this.Lb_Ttle.Name = "Lb_Ttle";
+            this.Lb_Ttle.Size = new System.Drawing.Size(182, 33);
+            this.Lb_Ttle.TabIndex = 12;
+            this.Lb_Ttle.Text = "RAPOR ÖZETİ";
             // 
             // panel4
             // 
@@ -390,101 +416,107 @@
             this.label2.Text = "KİTAP SAYISI";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Lb_Ttle
+            // btnadd
             // 
-            this.Lb_Ttle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Lb_Ttle.AutoSize = true;
-            this.Lb_Ttle.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Ttle.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Ttle.Location = new System.Drawing.Point(64, 376);
-            this.Lb_Ttle.Name = "Lb_Ttle";
-            this.Lb_Ttle.Size = new System.Drawing.Size(182, 33);
-            this.Lb_Ttle.TabIndex = 12;
-            this.Lb_Ttle.Text = "RAPOR ÖZETİ";
+            this.btnadd.ActiveBorderThickness = 1;
+            this.btnadd.ActiveCornerRadius = 20;
+            this.btnadd.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.ActiveForecolor = System.Drawing.Color.White;
+            this.btnadd.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnadd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnadd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadd.BackgroundImage")));
+            this.btnadd.ButtonText = "yazdırma ayarları";
+            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.IdleBorderThickness = 1;
+            this.btnadd.IdleCornerRadius = 20;
+            this.btnadd.IdleFillColor = System.Drawing.Color.White;
+            this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.Location = new System.Drawing.Point(543, 14);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(226, 67);
+            this.btnadd.TabIndex = 6;
+            this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // label1
+            // bunifuThinButton21
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(66, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 33);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "GENEL BİLGİLER";
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "baskıyı görüntüle";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(293, 14);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(236, 67);
+            this.bunifuThinButton21.TabIndex = 7;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // label14
+            // bunifuThinButton22
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(107, 73);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 19);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "MUHABİRİN ADI";
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Raporu yazdır";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(37, 14);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(238, 67);
+            this.bunifuThinButton22.TabIndex = 8;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
-            // label15
+            // printDialog1
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(396, 73);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 19);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "SUAAD NAJLB";
+            this.printDialog1.Document = this.printDocument1;
+            this.printDialog1.UseEXDialog = true;
             // 
-            // label16
+            // printDocument1
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(414, 132);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 19);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "MÜDÜR";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // label17
+            // printPreviewDialog1
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(118, 132);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 19);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "GEÇERLİLİK";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(414, 206);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(64, 19);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "MÜDÜR";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(51, 206);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(247, 19);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "RAPORUN DÜZENLENME TARİHİ";
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Text = "Baskı önizleme";
+            this.printPreviewDialog1.Visible = false;
             // 
             // FRM_REPORT
             // 
@@ -492,14 +524,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(797, 620);
-            this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bunifuThinButton22);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FRM_REPORT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Raporu yazdır";
             this.Load += new System.EventHandler(this.FRM_REPORT_Load);
             this.panel1.ResumeLayout(false);
@@ -544,13 +577,16 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lb_date;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lb_perm;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lb_Ttle;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

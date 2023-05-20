@@ -999,6 +999,13 @@ namespace LibM29.PL
                 FBOOKS.ID = 0;
                 bunifuTransition1.ShowSync(FBOOKS);
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            PL.FRM_REPORT Report = new FRM_REPORT();
+            Report.Show();
+
+        }
     }
     }
     
