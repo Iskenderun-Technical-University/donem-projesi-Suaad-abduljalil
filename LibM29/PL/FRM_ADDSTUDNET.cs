@@ -44,9 +44,9 @@ namespace LibM29.PL
 
         private void FRM_ADDBOKKS_Load(object sender, EventArgs e)
         {
-           
 
-        
+
+
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -59,12 +59,12 @@ namespace LibM29.PL
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txt_name.Text==""|| txt_lo.Text==""||txt_email.Text== "" )
+            if (txt_name.Text == "" || txt_lo.Text == "" || txt_email.Text == "")
 
 
-                {
-                PL.FRM_ERROR FError = new FRM_ERROR();
-                FError.Show();
+            {
+                PL.FRM_ERRORINSERT FError = new FRM_ERRORINSERT();
+                FError.ShowDialog();
             }
             else
             {
@@ -76,7 +76,7 @@ namespace LibM29.PL
 
                     //ADD 
                     BL.CLS_ST BLCAT = new BL.CLS_ST();
-                    BLCAT.insert(txt_name.Text,txt_lo.Text,txt_phone.Text,txt_email.Text,txt_scool.Text,txt_dept.Text,ma);
+                    BLCAT.Insert(txt_name.Text, txt_lo.Text, txt_phone.Text, txt_email.Text, txt_scool.Text, txt_dept.Text, ma);
                     PL.FRM_DADD Fadd = new FRM_DADD();
                     Fadd.Show();
                     this.Close();
@@ -95,7 +95,7 @@ namespace LibM29.PL
                 }
 
             }
-        }
+        } 
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -109,23 +109,6 @@ namespace LibM29.PL
 
         private void Lb_Ttle_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         }

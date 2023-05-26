@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Location = new System.Drawing.Point(-8, 89);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 1123);
             this.panel1.TabIndex = 0;
@@ -435,7 +435,7 @@
             this.btnadd.IdleFillColor = System.Drawing.Color.White;
             this.btnadd.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnadd.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnadd.Location = new System.Drawing.Point(543, 14);
+            this.btnadd.Location = new System.Drawing.Point(535, 14);
             this.btnadd.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(226, 67);
@@ -462,7 +462,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(293, 14);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(285, 14);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(236, 67);
@@ -489,7 +489,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(37, 14);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(29, 14);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(238, 67);

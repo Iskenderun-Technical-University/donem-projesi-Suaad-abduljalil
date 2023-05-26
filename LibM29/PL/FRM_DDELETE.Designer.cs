@@ -39,7 +39,7 @@
             this.Lb_Ttle.AutoSize = true;
             this.Lb_Ttle.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lb_Ttle.ForeColor = System.Drawing.Color.White;
-            this.Lb_Ttle.Location = new System.Drawing.Point(197, 264);
+            this.Lb_Ttle.Location = new System.Drawing.Point(198, 192);
             this.Lb_Ttle.Name = "Lb_Ttle";
             this.Lb_Ttle.Size = new System.Drawing.Size(173, 29);
             this.Lb_Ttle.TabIndex = 4;

@@ -41,8 +41,8 @@ namespace LibM29.PL
 
 
             {
-                PL.FRM_ERROR FError = new FRM_ERROR();
-                FError.Show();
+                PL.FRM_ERRORINSERT FError = new FRM_ERRORINSERT();
+                FError.ShowDialog();
             }
             else
             {

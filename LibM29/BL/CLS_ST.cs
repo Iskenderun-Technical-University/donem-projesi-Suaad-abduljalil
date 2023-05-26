@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
@@ -27,9 +26,12 @@ namespace LibM29.BL
 
 
         }
-        //INSERT DATA
-        public void insert(string NAME, string TLOACTION, string PHONE, string EMAIL, string SCHOOL, string DEP, MemoryStream COVER)
+       
+       
+
+        public void Insert(string NAME, string TLOACTION, string PHONE, string EMAIL, string SCHOOL, string DEP, MemoryStream COVER)
         {
+
             SqlParameter[] pr = new SqlParameter[7];
             pr[0] = new SqlParameter("NAME", NAME);
             pr[1] = new SqlParameter("TLOACTION", TLOACTION);
@@ -42,7 +44,6 @@ namespace LibM29.BL
             DAL.open();
             DAL.Excute("PR_INSERTST", pr);
             DAL.close();
-
         }
         public DataTable LOADEDIT(int ID)
         {
@@ -54,10 +55,8 @@ namespace LibM29.BL
 
 
         }
-        //UPDATE DATA
         public void update(string NAME, string TLOACTION, string PHONE, string EMAIL, string SCHOOL, string DEP, MemoryStream COVER, int ID)
         {
-
             SqlParameter[] pr = new SqlParameter[8];
             pr[0] = new SqlParameter("NAME", NAME);
             pr[1] = new SqlParameter("TLOACTION", TLOACTION);
@@ -70,6 +69,7 @@ namespace LibM29.BL
             DAL.open();
             DAL.Excute("PR_EDITST", pr);
             DAL.close();
+
         }
         //Delete DATA
         public void Delete(int ID)
@@ -88,7 +88,7 @@ namespace LibM29.BL
             SqlParameter[] pr = new SqlParameter[1];
             pr[0] = new SqlParameter("SERACH", search);
             DataTable dt = new DataTable();
-            dt = DAL.read("PR_SELLSERACH", pr);
+            dt = DAL.read("PR_SERACHST", pr);
             return dt;
 
 

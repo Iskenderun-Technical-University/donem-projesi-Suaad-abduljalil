@@ -307,7 +307,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lb_Ttle;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
@@ -315,5 +314,6 @@
         public System.Windows.Forms.Label txt_cat;
         public System.Windows.Forms.Label txt_auther;
         public System.Windows.Forms.Label txt_title;
+        public System.Windows.Forms.Label label2;
     }
 }

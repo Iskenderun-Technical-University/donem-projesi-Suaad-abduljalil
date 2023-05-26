@@ -139,6 +139,7 @@ namespace LibM29.PL
 
         private void button7_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = true;
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             txt_serach.Visible = true;
@@ -400,8 +401,8 @@ namespace LibM29.PL
                 P_HOME.Visible = false;
                 P_MINE.Visible = true;
                 bunifuThinButton24.Visible = true;
-                State = "ST";
-                Lb_Ttle.Text = "   ÖĞRENCİLER ";
+                State = "SELL";
+                Lb_Ttle.Text = "  satş";
 
 
                 // load data
@@ -501,6 +502,8 @@ namespace LibM29.PL
                 bunifuTransition1.ShowSync(FCAT);
 
             }
+
+           
             //edit books
             else if (State == "BOOKS")
             {
@@ -546,7 +549,7 @@ namespace LibM29.PL
             {
                 try
                 {
-                    PL.FRM_DETST FST = new FRM_DETST();
+                    PL.FRM_ADDSTUDNET FST = new FRM_ADDSTUDNET();
                     DataTable dt = new DataTable();
                     dt = BLST.LOADEDIT(Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value));
                     object obj1 = dt.Rows[0]["NAME"];
@@ -560,7 +563,7 @@ namespace LibM29.PL
                     FST.txt_lo.Text = obj2.ToString();
                     FST.txt_phone.Text = obj3.ToString();
                     FST.txt_email.Text = obj4.ToString();
-                    FST.txt_school.Text = obj5.ToString();
+                    FST.txt_scool.Text = obj5.ToString();
                     FST.txt_dept.Text = obj6.ToString();
                     //load ımage
                     byte[] ob = (byte[])obj7;
@@ -821,17 +824,17 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = true;
-            txt_serach.Visible = true;
+           // txt_serach.Visible = true;
 
             State = "ST";
-            Lb_Ttle.Text = "   ÖĞRENCİLER ";
+            Lb_Ttle.Text = " ÖĞRENCİLER ";
 
 
             // load data
             try
             {
                 DataTable dt = new DataTable();
-                dt = BSELL.Load();
+                dt = BLST.Load();
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns[0].HeaderText = "sıralama";
                 dataGridView1.Columns[1].HeaderText = "Kitap adı";
@@ -1004,6 +1007,11 @@ namespace LibM29.PL
         {
             PL.FRM_REPORT Report = new FRM_REPORT();
             Report.Show();
+
+        }
+
+        private void P_HOME_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

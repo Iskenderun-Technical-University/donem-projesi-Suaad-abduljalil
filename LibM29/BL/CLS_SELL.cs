@@ -29,7 +29,7 @@ namespace LibM29.BL
         {
             SqlParameter[] pr = null;
             DataTable dt = new DataTable();
-            dt = DAL.read("PR_LOADSTFORSELL", pr);
+            dt = DAL.read("PR_LOADBOOKFORSELL", pr);
             return dt;
 
 
