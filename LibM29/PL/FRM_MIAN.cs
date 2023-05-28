@@ -142,7 +142,7 @@ namespace LibM29.PL
             dataGridView1.Visible = true;
             P_HOME.Visible = false;
             P_MINE.Visible = true;
-            txt_serach.Visible = true;
+            txt_serach.Visible = false;
 
             State = "CAT";
             Lb_Ttle.Text = "    TÜRLER  ";
@@ -696,6 +696,8 @@ namespace LibM29.PL
                 DataTable dt = new DataTable();
                 dt = BLBOOKS.serach(txt_serach.Text);
                 dataGridView1.DataSource = dt;
+                
+
 
 
             }
@@ -855,7 +857,8 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = false;
-            txt_serach.Visible = true;
+            txt_serach.Visible = false;
+
 
             State = "SELL";
             Lb_Ttle.Text = "  satış ";
@@ -888,7 +891,9 @@ namespace LibM29.PL
             P_HOME.Visible = false;
             P_MINE.Visible = true;
             bunifuThinButton24.Visible = false;
-            txt_serach.Visible = true;
+           
+            txt_serach.Visible = false;
+
 
             State = "BOR";
             Lb_Ttle.Text = "borçlanma ";
